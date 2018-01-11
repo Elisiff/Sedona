@@ -1,0 +1,36 @@
+{
+  "name": "Sedona",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Проект «Седона»",
+  "author": "Anastasiya Vasina",
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "browser-sync": "^2.23.5",
+    "css-mqpacker": "^6.0.1",
+    "del": "^3.0.0",
+    "eslint": "^4.15.0",
+    "eslint-config-htmlacademy": "^0.3.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-js-minify": "0.0.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svg2string": "^0.3.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp.spritesmith": "^6.9.0",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "test": "eslint js/script.js",
+    "start": "gulp serve"
+  },
+  "engines": {
+    "node": "6.10"
+  }
+}
