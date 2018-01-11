@@ -27,8 +27,8 @@
     "number-no-trailing-zeros": [true, {
       "message": "Лишний (необязательный) ноль в дроби"
     }],
-    "string-quotes": ["single", {
-      "message": "Одинарные кавычки в стилях"
+    "string-quotes": ["double", {
+      "message": "Двойные кавычки в стилях"
     }],
     "length-zero-no-unit": [true, {
       "message": "Нулю не нужны измерения единиц"
