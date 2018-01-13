@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="description" content="Проект «Седона»">
+  <meta name="application-name" content="Sedona"> <!-- Название ярлыка -->
+  <!-- saved from url=(0014)about:internet -->
+	<title>Седона: форма отзыва</title>
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<!-- Фавиконки с сайта http://www.favicomatic.com/ -->
+  <link rel="icon" type="image/x-icon" href="img/favicons/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-128.png" sizes="128x128">
+  <meta name="application-name" content="&nbsp;">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="img/favicons/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="img/favicons/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="img/favicons/mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="img/favicons/mstile-310x310.png">
+</head>
+<body class="page">
+	<div class="page__wrapper">
+
+		<!-- Навигация -->
+		<nav class="main-nav main-nav--closed">
+			<ul class="main-nav__menu">
+				<li class="main-nav__item">
+					<a href="index.html">Главная</a>
+					<button type="button" class="main-nav__close-btn">Закрыть меню</button>
+				</li>
+				<li class="main-nav__item"><a href="media.html">Фото и видео</a></li>
+				<li class="main-nav__item"><a>Форма отзыва</a></li>
+				<li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+			</ul>
+			<div class="main-nav__opener">
+				<a href="index.html" class="main-nav__logo__wrapper">
+					<img src="img/icons-svg/logo-sedona-mobile.svg"  class="main-nav__logo" width="102" height="83" alt="Логотип">
+				</a>
+				<button type="button" class="main-nav__open-btn">Открыть меню</button>
+			</div>
+		</nav>
+
+		<!-- Шапка -->
+		<header class="header  header--other">
+			<img src="img/icons-svg/text-sedona.svg" alt="Седона" class="header__text" width="229" height="39">
+		</header>
+
+		<!-- Тело -->
+		<main class="main">
+
+			<!-- Заголовок -->
+			<h1 class="form-title">Оставьте свой отзыв</h1>
+			<p class="form-title__desc">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о помещенных вами достопримечательностях</p>
+
+			<!-- Форма -->
+			<form action="https://echo.htmlacademy.ru" class="review-form" method="post">
+				
+				<!-- Представьтесь -->
+				<section class="form-intro">
+					<h2 class="form-intro__title  review-form__subtitle">Представьтесь:</h2>
+					<label class="form-intro__label  review-form__label" for="form-intro__name-field">Имя*:</label>
+          <input class="form-intro__input  review-form__input" type="text" name="form-intro__name" id="form-intro__name-field" placeholder="Петр" required>
+          <label class="form-intro__label  review-form__label" for="form-intro__surname-field">Фамилия*:</label>
+          <input class="form-intro__input  review-form__input" type="text" name="form-intro__surname" id="form-intro__surname-field" placeholder="Иванов" required>
+          <label class="form-intro__label  review-form__label" for="form-intro__patronymic-field">Отчество:</label>
+          <input class="form-intro__input  review-form__input" type="text" name="form-intro__patronymic" id="form-intro__patronymic-field" placeholder="Александрович">
+				</section>
+
+				<!-- Контактная информация -->
+				<section class="form-contacts">
+					<h2 class="form-contacts__title  review-form__subtitle">Контактная информация:</h2>
+					<div class="form-contacts__wrapper">
+            <label class="form-contacts__label  review-form__label" for="form-contacts__tel-field">Телефон*:</label>
+            <input class="form-contacts__input  review-form__input" type="tel" name="form-contacts__tel" id="form-contacts__tel-field" placeholder="Введите телефон" required>
+            <label class="form-contacts__label  review-form__label" for="form-contacts__email-field">Электронная почта*:</label>
+            <input class="form-contacts__input  review-form__input" type="email" name="form-contacts__email" id="form-contacts__email-field" placeholder="Введите e-mail" required>
+          </div>
+				</section>
+
+				<!-- Общее впечатление -->
+				<section class="form-impression">
+					<h2 class="form-impression__title  review-form__subtitle">Ваше общее впечатление:</h2>
+					<label class="form-impression__item">
+            <input class="form-impression__radio" type="radio" name="form-impression__mark" value="positive" checked>
+            <span class="form-impression__radio-indicator"></span>
+            Скорее положительное
+          </label>
+          <label class="form-impression__item">
+            <input class="form-impression__radio" type="radio" name="form-impression__mark" value="negative">
+            <span class="form-impression__radio-indicator"></span>
+            Скорее отрицательное
+          </label>
+          <label class="form-impression__item">
+            <input class="form-impression__radio" type="radio" name="form-impression__mark" value="another">
+            <span class="form-impression__radio-indicator"></span>
+            Затрудняюсь ответить
+          </label>
+				</section>
+
+				<!-- Достопримечательности -->
+				<section class="form-sights">
+					<h2 class="form-sights__title  review-form__subtitle">Посещенные достопримечательности:</h2>
+					<div class="form-sights__wrapper">
+						<label class="form-sights__item">
+							<input class="form-sights__checkbox" type="checkbox" name="form-sights__bridge" checked>
+							<span class="form-sights__checkbox-indicator"></span>
+							Мост Дьявола
+						</label>
+						<label class="form-sights__item">
+							<input class="form-sights__checkbox" type="checkbox" name="form-sights__mountain" checked>
+							<span class="form-sights__checkbox-indicator"></span>
+							Гора-Колокол
+						</label>
+						<label class="form-sights__item">
+							<input class="form-sights__checkbox" type="checkbox" name="form-sights__park" checked>
+							<span class="form-sights__checkbox-indicator"></span>
+							Слайд-парк
+						</label>
+						<label class="form-sights__item">
+							<input class="form-sights__checkbox" type="checkbox" name="form-sights__cliffs">
+							<span class="form-sights__checkbox-indicator"></span>
+							Красные скалы
+						</label>
+					</div>
+				</section>
+
+				<!-- Эмоции -->
+				<section class="form-emotions">
+					<h2 class="form-emotions__title  review-form__subtitle">Опишите свои эмоции:</h2>
+					<textarea class="form-emotions__textarea" name="form-emotions__text" placeholder="Опишите подробно все свои восторги"></textarea>
+				</section>
+
+				<!-- Кнопка -->
+				<div class="review-form__submit">
+          <button class="review-form__submit-btn">Отправить отзыв</button>
+          <p class="review-form__necessarily">* — Обязательные поля
+          </p>
+        </div>
+
+				<!-- Модальные окна -->
+				<section class="popup-success  popup-success--closed">
+          <b class="popup-success__title">Ваш отзыв отправлен!</b>
+          <p class="popup-success__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          <div class="popup-success__btn-wrapper">
+            <button type="button" class="popup-success__btn">Закрыть окно
+            </button>
+          </div>
+        </section>
+
+        <section class="popup-failure  popup-failure--closed">
+          <b class="popup-failure__title">Что-то пошло не так!</b>
+          <p class="popup-failure__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button type="button" class="popup-failure__btn">Ок</button>
+        </section>
+
+         <div class="popup-overlay"></div>
+			</form>
+		</main>
+
+		<!-- Подвал -->
+		<footer class="footer">
+			<b class="footer__visitsedona">#visitsedona</b>
+			<section class="social">
+				<a href="#" class="social__btn  social__btn--tw">Twitter</a>
+		    <a href="#" class="social__btn  social__btn--fb">Facebook</a>
+		    <a href="#" class="social__btn  social__btn--youtube">Youtube</a>
+			</section>
+			<section class="copyright">
+				<p class="copyright__text">
+		      Разработано
+		    </p>
+		    <a href="https://htmlacademy.ru/">
+		    	<img src="img/icons-svg/htmlacademy.svg" alt="HTML academy" class="copyright__academy-logo" width="27" height="34">
+		    </a>
+			</section>
+		</footer>
+
+	</div>
+</body>
+</html>
