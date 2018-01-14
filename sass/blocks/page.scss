@@ -27,7 +27,7 @@
 }
 
 code {
-  font-family: $ptsans; //некоторые браузеры ставят свой шрифт
+  font-family: $ptsans; // некоторые браузеры ставят свой шрифт
 }
 
 *,
@@ -78,14 +78,18 @@ summary {
 // Обнуляем отступы
 figure,
 li,
-ul,
-ol,
 p {
   margin: 0;
   padding: 0;
 }
 
-//Оформление этой страницы
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Оформление этой страницы
 .page__wrapper {
   margin: 0 auto;
 }
