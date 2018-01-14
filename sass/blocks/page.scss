@@ -1,0 +1,91 @@
+// Нормализация вьюпорта для windows-телефонов
+@at-root {
+
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+.page {
+  min-width: 320px;
+  width: auto;
+  min-height: 100%;
+  box-sizing: border-box;
+  font-family: $ptsans;
+  @include text(400, normal, 14px, 21px);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Убираем подсветку ссылок и JS-элементов в WebKit на мобильных платформах
+  -ms-overflow-style: scrollbar; // Фиксированный скроллбар
+  -ms-text-size-adjust: 100%; // Задаем правильное масштабирование текста для IE на мобильных устройствах
+
+  @media print, #{$tablet} {
+  min-width: 768px;
+  }
+
+  @media print, #{$desktop} {
+  min-width: 1200px;
+  }
+}
+
+code {
+  font-family: $ptsans; //некоторые браузеры ставят свой шрифт
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  // min-height: 100%;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Запрет масштабирования по двойному клику на сенсорных экранах
+a,
+// area,
+button,
+input,
+label,
+select,
+// summary,
+textarea {
+  touch-action: manipulation;
+}
+
+// Для IE 6, 7, 8, 9 и FF3
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+// Обнуляем отступы
+figure,
+li,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+//Оформление этой страницы
+.page__wrapper {
+  margin: 0 auto;
+}

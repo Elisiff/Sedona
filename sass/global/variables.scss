@@ -1,0 +1,43 @@
+// Шрифты
+$ptsans: "ptsans", "Arial", sans-serif;
+
+// Для сетки
+$outline: 1px solid black;
+
+// Цвета фона
+$bg-white: #ffffff;
+$bg-blue: #81b3d2;
+$bg-blue-hover: #669ec0;
+$bg-blue-down: #5496bd;
+$bg-gray: #eeeeee;
+$bg-photo-desc: rgba(0, 0, 0, 0.3);
+$bg-controls: rgba(0, 0, 0, 0.6);
+$bg-input: #f2f2f2;
+$bg-input-hover: #e5e5e5;
+$bg-form-icons: #e6e6e6;
+$bg-indicator: #333333;
+$bg-radiobtn-down: #d5d5d5;
+$bg-indicator-down: #a4a4a4;
+$bg-controlbtn: #5c6870;
+$bg-controlbtn-down: #c1c1c1;
+
+// Цвета текста
+$text-white: #ffffff;
+$text-black: #000000;
+$text-gray: #333333;
+$text-blue: #81b3d2;
+$text-lightgray: rgba(0, 0, 0, 0.3);
+$text-red: #ff0000;
+$text-brown: #766357;
+$text-brown2: #604e43;
+$text-lightbrown: rgba(118, 99, 87, 0.3);
+$text-btn-down: rgba(255, 255, 255, 0.3);
+
+// Адаптивность
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+// @media #{$tablet} {}
+// @media #{$desktop} {}
+// @media #{$retina} {}

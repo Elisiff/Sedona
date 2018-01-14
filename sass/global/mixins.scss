@@ -1,0 +1,44 @@
+// Текст
+@mixin text($font-weight, $font-style, $font-size, $line-height, $color: null) {
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+// Абсолютное позиционирование
+@mixin pos() {
+  content: "";
+  position: absolute;
+}
+
+// clearfix
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Квадрат
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// Кнопка
+@mixin button($padding-vertical, $padding-horizontal, $color, $background, $border-radius, $border: null) {
+  padding: $padding-vertical $padding-horizontal;
+  color: $color;
+  background-color: $background;
+  border-radius: $border-radius;
+  border-color: $border;
+}
+
+// Обрезка текста с многоточием
+@mixin text-overflow() {
+  overflow: hidden;  //скрывает содержимое, выходящее за пределы блока
+  text-overflow: ellipsis;  //текст обрезается, к концу строки добавляется многоточие
+  white-space: nowrap;  //запрещен перенос слов
+}
