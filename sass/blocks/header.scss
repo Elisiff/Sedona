@@ -1,0 +1,44 @@
+.header {
+	background-image: url("../img/bg-back-mobile@1x.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: $bg-white;
+	background-size: cover;
+
+	&--index {
+    min-height: 390px;
+  }
+
+  &--other {
+  	min-height: 159px;
+  	background-position: left bottom;
+  }
+}
+
+@media #{$retina} {
+  .header {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+.header__text {
+	margin: 0 auto;
+
+	&--index {
+		width: 282px;
+		height: 390px;
+	 	background-image: url("../img/icons-svg/text-sedona-index.svg");
+	  background-repeat: no-repeat;
+	  background-position: center 90px;
+	  background-size: 282px 214px;
+  }
+
+	&--other {
+  	width: 229px;
+		height: 159px;
+	 	background-image: url("../img/icons-svg/text-sedona.svg");
+	  background-repeat: no-repeat;
+	  background-position: center 50px;
+	  background-size: 229px 39px;
+  }
+}

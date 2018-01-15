@@ -1,0 +1,129 @@
+.main-nav__menu {
+	background-color: $bg-blue-nav;
+}
+
+.main-nav__item {
+	position: relative;
+	padding: 7px 0 8px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 0 0 rgba(225, 225, 225, 0.4), 
+							0 1px 0 0px $bg-blue;
+
+	&:last-child {
+		border-bottom: none;
+		box-shadow: inset 0 -1px 4px 0px rgba(0, 0, 0, 0.3);
+	}
+	
+  &:hover, &:focus, &:focus:hover {
+		background-color: $bg-blue-hover;
+  }
+
+  &:active {
+  	background-color: $bg-blue-down;
+  }
+
+  &--active:active {
+  	background-color: $bg-blue-hover;
+  }
+
+  a {
+  	display: block;
+		@include text(700, normal, 18px, 40px);
+		color: $text-white;
+		text-align: center;
+	  text-transform: uppercase;
+	  text-decoration: none;
+  }
+
+  a:link, a:visited {
+  	color: $text-white;
+    text-decoration: none;
+  }
+
+  a:hover {
+  	color: $text-white;
+    text-decoration: none;
+  }
+
+  a:active {
+  	color: $text-btn-down;
+  	text-decoration: none;
+  }
+}
+
+.main-nav__link--active {
+	color: $text-white;
+
+  &:active {
+  	color: $text-white !important;
+  }
+}
+
+.main-nav__opener {
+	position: relative;
+	width: 320px;
+	height: 56px;
+	margin: 0 auto;
+}
+
+.main-nav__logo {
+	@include pos;
+	top: 0;
+	left: 34.5%;
+	z-index: 10;
+}
+
+// Бургер
+.main-nav__open-btn {
+	@include pos;
+	top: 17px;
+	right: 21px;
+	width: 23px;
+	height: 21px;
+	font-size: 0;
+	background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &::before {
+    @include pos;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background-color: $bg-blue;
+    box-shadow: 0 9px 0 0 $bg-blue,
+                0 18px 0 0 $bg-blue;
+  }
+}
+
+// Крестик
+.main-nav__close-btn {
+	@include pos;
+	top: -205px;
+	right: 22px;
+	width: 23px;
+	height: 22px;
+	font-size: 0;
+	background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+	&::before,
+  &::after {
+    @include pos;
+    top: 8px;
+    right: -4px;
+    width: 27px;
+    height: 5px;
+    background-color: $bg-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
