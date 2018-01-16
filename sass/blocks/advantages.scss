@@ -1,0 +1,60 @@
+.advantages__reason {
+	background-color: $bg-gray;
+
+	&:nth-child(1) {
+		background-color: $bg-white;
+	}
+
+	&:nth-child(2) {
+		background-color: $bg-blue;
+	}
+}
+
+.advantages__wrapper {
+	background-color: $bg-blue;
+}
+
+.advantages__desc, 
+.advantages__more {
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+.advantages__desc {
+	text-align: center;
+	padding: 0 20px;
+}
+
+.advantages__title {
+	@include text(700, normal, 18px, 26px, $text-black);
+}
+
+.advantages__count {
+	@include text(400, normal, 14px, 21px, $text-gray);
+}
+
+.advantages__about {
+	@include text(400, normal, 14px, 21px, $text-gray);
+}
+
+.advantages__reason:nth-child(1) .advantages__title, 
+.advantages__reason:nth-child(1) .advantages__count, 
+.advantages__reason:nth-child(1) .advantages__about {
+	color: $text-white;
+}
+
+.advantages__reason:nth-child(2) .advantages__title, 
+.advantages__reason:nth-child(2) .advantages__count, 
+.advantages__reason:nth-child(2) .advantages__about {
+	color: $text-white;
+}
+
+.advantages__photo { //сделать контейнер, задат ему нужные высоту и ширину
+	width: 767px;				// рразместить большое фото, сдвинув маргинами
+	height: 260px;
+	margin: 0 auto;
+}
+
+.advantages__more {
+	padding: 0 20px;
+}

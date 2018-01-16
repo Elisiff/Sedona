@@ -535,7 +535,7 @@ ol, ul {
 .main-nav__opener {
   position: relative;
   width: 320px;
-  height: 56px;
+  min-height: 56px;
   margin: 0 auto; }
 
 .main-nav__logo {
@@ -594,6 +594,7 @@ ol, ul {
             transform: rotate(-45deg); }
 
 .header {
+  position: relative;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -601,9 +602,29 @@ ol, ul {
   background-size: cover; }
   .header--index {
     min-height: 390px; }
+    .header--index::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 57px;
+      background-image: url("../img/icons-svg/bg-intro-triangle-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 57px; }
   .header--other {
     min-height: 159px;
     background-position: left bottom; }
+    .header--other::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 57px;
+      background-image: url("../img/icons-svg/bg-intro-triangle-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 57px; }
 
 .header__text {
   margin: 0 auto; }
@@ -621,16 +642,132 @@ ol, ul {
     background-repeat: no-repeat;
     background-position: center 50px;
     background-size: 229px 39px; }
-  @media print, (min-width: 768px) {
+
+.main-title {
+  position: relative; }
+  .main-title::after {
+    content: "";
+    position: absolute;
+    bottom: -21px;
+    right: 0;
+    width: 100%;
+    height: 37px;
+    background-image: url("../img/icons-svg/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 37px; }
+
+.main-title__name {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 39px 22px 24px 22px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase; }
+
+.main-title__desc {
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase; }
+  .main-title__desc--index {
+    padding: 2px 22px 27px 22px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 26px;
+    color: #333333; }
+  .main-title__desc--media {
+    padding: 0 20px 26px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333; }
+  .main-title__desc--form {
+    padding: 0 20px 18px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333; }
+
+.advantages__reason {
+  background-color: #eeeeee; }
+  .advantages__reason:nth-child(1) {
+    background-color: #ffffff; }
+  .advantages__reason:nth-child(2) {
+    background-color: #81b3d2; }
+
+.advantages__wrapper {
+  background-color: #81b3d2; }
+
+.advantages__desc,
+.advantages__more {
+  max-width: 320px;
+  margin: 0 auto; }
+
+.advantages__desc {
+  text-align: center;
+  padding: 0 20px; }
+
+.advantages__title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000; }
+
+.advantages__count {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333; }
+
+.advantages__about {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333; }
+
+.advantages__reason:nth-child(1) .advantages__title,
+.advantages__reason:nth-child(1) .advantages__count,
+.advantages__reason:nth-child(1) .advantages__about {
+  color: #ffffff; }
+
+.advantages__reason:nth-child(2) .advantages__title,
+.advantages__reason:nth-child(2) .advantages__count,
+.advantages__reason:nth-child(2) .advantages__about {
+  color: #ffffff; }
+
+.advantages__photo {
+  width: 767px;
+  height: 260px;
+  margin: 0 auto; }
+
+.advantages__more {
+  padding: 0 20px; }
+
+@media print, (min-width: 768px) {
     .page {
       min-width: 768px; } }
-  @media print, (min-width: 1200px) {
+
+@media print, (min-width: 1200px) {
     .page {
       min-width: 1200px; } }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); } }
-  @media print {
+
+@media print {
   *,
   *:before,
   *:after {

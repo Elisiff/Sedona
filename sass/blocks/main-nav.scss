@@ -1,4 +1,5 @@
 .main-nav__menu {
+	// display: none;
 	background-color: $bg-blue-nav;
 }
 
@@ -62,7 +63,7 @@
 .main-nav__opener {
 	position: relative;
 	width: 320px;
-	height: 56px;
+	min-height: 56px;
 	margin: 0 auto;
 }
 

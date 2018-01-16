@@ -1,4 +1,5 @@
 .header {
+	position: relative;
 	background-image: url("../img/bg-back-mobile@1x.jpg");
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -7,11 +8,33 @@
 
 	&--index {
     min-height: 390px;
+
+    &::before {
+	    @include pos;
+	    bottom: 0;
+	    right: 0;
+	    width: 100%;
+	    height: 57px;
+	    background-image: url("../img/icons-svg/bg-intro-triangle-mobile.svg");
+	    background-repeat: no-repeat;
+	    background-size: 100% 57px;
+	  }
   }
 
   &--other {
   	min-height: 159px;
   	background-position: left bottom;
+
+  	&::before {
+	    @include pos;
+	    bottom: 0;
+	    right: 0;
+	    width: 100%;
+	    height: 57px;
+	    background-image: url("../img/icons-svg/bg-intro-triangle-mobile.svg");
+	    background-repeat: no-repeat;
+	    background-size: 100% 57px;
+	  }
   }
 }
 
