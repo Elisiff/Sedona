@@ -10,6 +10,7 @@
   <!-- saved from url=(0014)about:internet -->
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="img/sprite.js"></script>
 
   <!-- Фавиконки с сайта http://www.favicomatic.com/ -->
   <link rel="icon" type="image/x-icon" href="img/favicons/favicon.ico">
@@ -36,6 +37,14 @@
 </head>
 
 <body class="page">
+	<!-- SVG sprite -->
+  <div class="svg-placeholder"
+    style="border: 0; clip: rect(0 0 0 0); height: 1px;
+      margin: -1px; overflow: hidden; padding: 0;
+      position: absolute; width: 1px;"></div>
+  <script>
+    document.querySelector(".svg-placeholder").innerHTML = SVG_SPRITE;
+  </script>
 
 	<!-- Навигация -->
 	<nav class="main-nav">
@@ -78,24 +87,41 @@
 						<p class="advantages__about">Седона не аттракцион для туристов, там течет своя жизнь</p>
 					</div>
 				</div>
-				<img src="img/photo-city-tablet@1x.jpg" alt="Седона" class="advantages__photo" width="320" height="260">
+				<div class="advantages__photo-wrapper">
+					<picture>
+            <source media="(min-width: 520px)" srcset="img/photo-city@1x.jpg, img/photo-city@2x.jpg 2x" class="advantages__photo">
+            <img src="img/photo-city-mob@1x.jpg" srcset="img/photo-city-mob@2x.jpg 2x" width="320" height="260" alt="Седона" class="advantages__photo">
+          </picture>
+				</div>
 				<ul class="advantages__more">
 					<li class="advantages__item">
-						<img src="img/icons-svg/icon-house.svg" alt="Жилье" class="advantages__item-logo" width="39" height="37">
+						<div class="advantages__logo-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" class="advantages__logo-house">
+						    <use xlink:href="#icon-house"></use>
+						  </svg>
+						</div>
 						<div class="advantages__item-desc">
 							<b>Жилье</b>
 							<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 						</div>
 					</li>
 					<li class="advantages__item">
-						<img src="img/icons-svg/icon-gift.svg" alt="Сувениры" class="advantages__item-logo" width="32" height="38">
+						<div class="advantages__logo-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" class="advantages__logo-gift">
+						    <use xlink:href="#icon-gift"></use>
+						  </svg>
+						</div>
 						<div class="advantages__item-desc">
 							<b>Сувениры</b>
 							<p>Не только китайского, но и местного производства!</p>
 						</div>
 					</li>
 					<li class="advantages__item">
-						<img src="img/icons-svg/icon-burger.svg" alt="Еда" class="advantages__item-logo" width="40" height="35">
+						<div class="advantages__logo-wrapper">
+							<svg xmlns="http://www.w3.org/2000/svg" class="advantages__logo-burger">
+						    <use xlink:href="#icon-burger"></use>
+						  </svg>
+						</div>
 						<div class="advantages__item-desc">
 							<b>Еда</b>
 							<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
@@ -109,7 +135,12 @@
 					<p class="advantages__count">— №2 —</p>
 					<p class="advantages__about">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
 				</div>
-				<img src="img/photo-bridge-mobile@1x.jpg" alt="Седона" class="advantages__photo" width="320" height="260">
+				<div class="advantages__photo-wrapper">
+					<picture>
+            <source media="(min-width: 520px)" srcset="img/photo-bridge@1x.jpg, img/photo-bridge@2x.jpg 2x" class="advantages__photo">
+            <img src="img/photo-bridge-mob@1x.jpg" srcset="img/photo-bridge-mob@2x.jpg 2x" width="320" height="260" alt="Седона" class="advantages__photo">
+          </picture>
+				</div>
 			</section>
 			<section class="advantages__reason">
 				<div class="advantages__desc">
@@ -164,5 +195,7 @@
       </a>
 		</section>
 	</footer>
+
+	<script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
 </body>
 </html>
