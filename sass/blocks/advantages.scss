@@ -72,7 +72,7 @@
 }
 
 .advantages__photo-wrapper {
-	max-width: 800px;
+	max-width: 768px;
 	width: 100%;
 	height: 260px;
 	margin: 0 auto;
@@ -100,10 +100,9 @@
 	align-items: flex-start;
 }
 
-.advantages__logo-wrapper { //нужна ли обертка?
+.advantages__logo-wrapper {
 	padding-top: 25px;
 	width: 42px;
-	overflow: none;
 }
 
 .advantages__item:nth-child(2) .advantages__logo-wrapper {

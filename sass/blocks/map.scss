@@ -1,0 +1,28 @@
+.map {
+	position: relative;
+	max-width: 768px; 
+	height: 350px;
+	margin: 0 auto;
+	background-image: url("../img/bg-map-tablet@1x.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: $bg-white;
+	background-size: auto;
+
+	&::after {
+		@include pos;
+		top: 45.72%;
+		left: 48.18%;
+		width: 27px;
+		height: 27px;
+		background-image: url("../img/icons-svg/icon-map-marker.svg");
+		background-repeat: no-repeat;
+		background-size: 27px 27px;
+	}
+}
+
+@media #{$retina} {
+  .map {
+    background-image: url("../img/bg-map-tablet@2x.jpg");
+  }
+}

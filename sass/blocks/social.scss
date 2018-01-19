@@ -1,0 +1,54 @@
+.social {
+	display: flex;
+	justify-content: center;
+	margin-top: 37px;
+}
+
+.social__btn {
+	display: block;
+	margin-right: 7px;
+	padding-top: 15px;
+	padding-left: 1px;
+	width: 46px;
+	height: 47px;
+	background-color: $bg-blue;
+
+	&:nth-child(2) {
+		padding-top: 13px;
+	}
+
+	&:last-child {
+		margin-right: 0;
+		padding-top: 16px;
+	}
+
+	&:hover {
+		background-color: $bg-blue-hover;
+	}
+
+	&:active {
+		background-color: $bg-blue-down;
+	}
+
+	&:active svg {
+		fill: #88b6d1;
+	}
+}
+
+.social__btn-tw {
+	width: 50.5%;
+	height: 50.5%;
+	fill: $bg-white;
+}
+
+.social__btn-fb {
+	width: 56%;
+	height: 56%;
+	fill: $bg-white;
+}
+
+.social__btn-youtube {
+	width: 46%;
+	height: 46%;
+	fill: $bg-white;
+}

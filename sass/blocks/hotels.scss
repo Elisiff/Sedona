@@ -1,0 +1,43 @@
+.hotels {
+	max-width: 320px;
+	margin: 0 auto;
+	padding: 29px 20px 48px 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.hotels__title {
+	@include text(700, normal, 21px, 26px, $text-black);
+}
+
+.hotels__deals {
+	padding: 18px 0 35px 0;
+	@include text(400, normal, 14px, 24px, $text-gray);
+}
+
+.hotels__search {
+	max-width: 280px;
+	width: 100%;
+
+	a {
+		display: block;
+		padding: 16px 0 16px 0;
+		@include text(700, normal, 21px, 26px, $text-white);
+		text-transform: uppercase;
+		background-color: $bg-blue;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $bg-blue-hover;
+		}
+
+		&:active {
+			background-color: $bg-blue-down;
+			color: $text-btn-down;
+		}
+
+		&:disabled {
+			background-color: $bg-input-hover;
+		}
+	}
+}

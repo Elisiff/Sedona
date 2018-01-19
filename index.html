@@ -174,7 +174,6 @@
 
 		<!-- Карта -->
 		<section class="map">
-			<span class="map__marker"></span>
 		</section>
 	</main>
 
@@ -182,16 +181,30 @@
 	<footer class="footer">
 		<b class="footer__visitsedona">#visitsedona</b>
 		<section class="social">
-			<a href="#" class="social__btn  social__btn--tw">Twitter</a>
-      <a href="#" class="social__btn  social__btn--fb">Facebook</a>
-      <a href="#" class="social__btn  social__btn--youtube">Youtube</a>
+			<a href="#" class="social__btn">
+				<svg xmlns="http://www.w3.org/2000/svg" class="social__btn-tw">
+			    <use xlink:href="#icon-twitter"></use>
+			  </svg>
+			</a>
+      <a href="#" class="social__btn">
+      	<svg xmlns="http://www.w3.org/2000/svg" class="social__btn-fb">
+			    <use xlink:href="#icon-facebook"></use>
+			  </svg>
+      </a>
+      <a href="#" class="social__btn">
+      	<svg xmlns="http://www.w3.org/2000/svg" class="social__btn-youtube">
+			    <use xlink:href="#icon-youtube"></use>
+			  </svg>
+      </a>
 		</section>
-		<section class="copyright">
-			<p class="copyright__text">
+		<section class="footer__copyright">
+			<p class="footer__copyright-text">
         Разработано
       </p>
-      <a href="https://htmlacademy.ru/">
-      	<img src="img/icons-svg/htmlacademy.svg" alt="HTML academy" class="copyright__academy-logo" width="27" height="34">
+      <a href="https://htmlacademy.ru/" class="footer__copyright-logo">
+      	<svg xmlns="http://www.w3.org/2000/svg">
+			    <use xlink:href="#logo-htmlacademy"></use>
+			  </svg>
       </a>
 		</section>
 	</footer>
