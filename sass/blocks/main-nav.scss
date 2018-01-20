@@ -4,8 +4,7 @@
 }
 
 .main-nav__item {
-	position: relative;
-	padding: 7px 0 8px 0;
+  position: relative;	
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 	box-shadow: 0 1px 0 0 rgba(225, 225, 225, 0.4), 
 							0 1px 0 0px $bg-blue;
@@ -26,27 +25,28 @@
   &--active:active {
   	background-color: $bg-blue-hover;
   }
+}
 
-  a {
-  	display: block;
-		@include text(700, normal, 18px, 40px);
-		color: $text-white;
-		text-align: center;
-	  text-transform: uppercase;
-	  text-decoration: none;
-  }
+.main-nav__item a {
+	display: block;
+  padding: 7px 6.25% 8px 6.25%;
+	@include text(700, normal, 18px, 40px);
+	color: $text-white;
+	text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
 
-  a:link, a:visited {
+  &:link, &:visited {
   	color: $text-white;
     text-decoration: none;
   }
 
-  a:hover {
+  &:hover {
   	color: $text-white;
     text-decoration: none;
   }
 
-  a:active {
+  &:active {
   	color: $text-btn-down;
   	text-decoration: none;
   }
@@ -62,16 +62,21 @@
 
 .main-nav__opener {
 	position: relative;
-	width: 320px;
 	min-height: 56px;
-	margin: 0 auto;
+}
+
+.main-nav__logo-wrapper {
+  position: relative;
+  display: block;
+  width: 102px;
+  margin: 0 auto;
 }
 
 .main-nav__logo {
-	@include pos;
-	top: 0;
-	left: 34.5%;
-	z-index: 10;
+  @include pos;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 // Бургер
@@ -101,7 +106,7 @@
 // Крестик
 .main-nav__close-btn {
 	@include pos;
-	top: -205px;
+	top: 19px;
 	right: 22px;
 	width: 23px;
 	height: 22px;

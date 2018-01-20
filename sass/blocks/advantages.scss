@@ -1,26 +1,5 @@
-.advantages__reason {
-	background-color: $bg-gray;
-
-	&:nth-child(1) {
-		background-color: $bg-white;
-	}
-
-	&:nth-child(2) {
-		background-color: $bg-blue;
-	}
-}
-
-.advantages__wrapper {
-	background-color: $bg-blue;
-}
-
-.advantages__desc, 
-.advantages__more {
-	max-width: 320px;
-	margin: 0 auto;
-}
-
 .advantages__desc {
+	background-color: $bg-gray;
 	text-align: center;
 	text-transform: uppercase;
 	padding: 27px 20px 0 20px;
@@ -28,10 +7,12 @@
 
 .advantages__reason:nth-child(1) .advantages__desc {
 	padding-top: 56px;
+	background-color: $bg-blue
 }
 
 .advantages__reason:nth-child(2) .advantages__desc {
 	padding-top: 38px;
+	background-color: $bg-blue
 }
 
 .advantages__title {
@@ -91,7 +72,9 @@
 }
 
 .advantages__more {
-	padding: 0 20px 37px 20px;
+	max-width: 767px;
+	margin: 0 auto;
+	padding: 0 6.25% 37px 6.25%;
 }
 
 .advantages__item {
