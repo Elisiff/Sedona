@@ -1,0 +1,46 @@
+.photo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.photo__item {
+	padding: 22px 6.25% 17px 6.25%;
+}
+
+.photo__desc {
+	padding: 16px 0 0 0;
+}
+
+.photo__title {
+	@include text(700, normal, 14px, 24px, $text-black);
+	text-transform: uppercase;
+}
+
+.photo__author {
+	@include text(400, normal, 14px, 24px, $text-gray);
+}
+
+.photo__likes {
+	display: flex;
+	padding-top: 6px;
+}
+
+.photo__likes-icon {
+	width: 23px;
+	height: 21px;
+	fill: #b2b2b2;
+	cursor: pointer;
+}
+
+.photo__likes-count {
+	@include text(700, normal, 14px, 24px, $text-black);
+	margin-left: 13px;
+	margin-top: 1px;
+}
+
+.photo__line {
+	width: 100%;
+	height: 1px;
+	background-color: $bg-input-hover;
+}

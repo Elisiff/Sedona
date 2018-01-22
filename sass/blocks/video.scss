@@ -1,0 +1,109 @@
+.video {
+	margin-bottom: -5px;
+}
+
+.video__desc {
+	padding: 34px 6.25% 35px 6.25%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.video__title {
+	@include text(700, normal, 18px, 26px, $text-black);
+}
+
+.video__text {
+	padding-top: 26px;
+	@include text(400, normal, 14px, 24px, $text-gray);
+}
+
+.video__presentation img, 
+.video__presentation source {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.video__controls {
+	padding: 0 6.25%;
+}
+
+.video__bar-wrapper {
+	position: relative;
+	padding: 23px 22px 19px 22px;
+	transform: translate(0, -100%);
+	background-color: rgba(0, 0, 0, 0.6);
+
+	&::after {
+		@include pos;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(80, 76, 74, 0.2);
+	}
+}
+
+.video__bar {
+	position: relative;
+	height: 3px;
+	background-color: rgba(255, 255, 255, 0.4);
+
+	&::after {
+		@include pos;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(80, 76, 74, 0.2);
+	}
+}
+
+.video__toggle {
+	@include pos;
+	top: -100%;
+	left: 15.254%; // 36px
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background-color: $bg-white;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.video__btns {
+	display: flex;
+	justify-content: space-between;
+	transform: translate(0, -67%);
+	padding: 22px 23px 18px 23px;
+	background-color: $bg-input;
+}
+
+.video__btn {
+	fill: #5c6870;
+	cursor: pointer;
+
+	&:hover {
+		fill: #333333;
+	}
+
+	&:active {
+		fill: #c1c1c1;
+	}
+}
+
+.video__replay {
+	width: 16px;
+	height: 20px;
+}
+
+.video__subtitles {
+	width: 32px;
+	height: 20px;
+	margin-right: 27px;
+}
+
+.video__fullscreen {
+	width: 20px;
+	height: 20px;
+}
