@@ -1,0 +1,132 @@
+.popup__success {
+	position: fixed;
+  top: 40vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 42px 40px 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $bg-white;
+  box-shadow: 0px 7px 32px 0 rgba(0, 1, 1, 0.15);
+  z-index: 30;
+
+	&--closed {
+		display: none;
+	}
+}
+
+.popup__success-title {
+	@include text(700, normal, 18px, 26px, $text-black);
+
+	span {
+		font-weight: 400;
+	}
+}
+
+.popup__success-desc {
+	padding: 26px 0 35px 0;
+	@include text(400, normal, 14px, 24px, $text-gray);
+}
+
+.popup__success-wrapper {
+	margin: 0 -40px;
+	padding: 20px 7%;
+	background-color: $bg-input;
+}
+
+.popup__success-btn {
+	width: 100%;
+	padding: 16px 0;
+	@include text(700, normal, 18px, 26px, $text-white);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $bg-blue;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $bg-blue-hover;
+	}
+
+	&:active {
+		background-color: $bg-blue-down;
+		color: $text-btn-down;
+	}
+
+	&:disabled {
+		background-color: $bg-input-hover;
+	}
+}
+
+.popup__failure {
+	position: fixed;
+  top: 40vh;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 45px 20% 35px 20%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $bg-white;
+  box-shadow: 0px 7px 32px 0 rgba(0, 1, 1, 0.15);
+  z-index: 30;
+
+	&--closed {
+		display: none;
+	}
+}
+
+.popup__failure-title {
+	@include text(700, normal, 18px, 26px, $text-black);
+
+	span {
+		font-weight: 400;
+	}
+}
+
+.popup__failure-desc {
+	padding: 22px 0;
+	@include text(400, normal, 14px, 24px, $text-gray);
+}
+
+.popup__failure-wrapper {
+	padding: 0 11.5%; // 25px
+}
+
+.popup__failure-btn {
+	width: 100%;
+	padding: 16px 0;
+	@include text(700, normal, 18px, 26px, $text-white);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $bg-blue;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $bg-blue-hover;
+	}
+
+	&:active {
+		background-color: $bg-blue-down;
+		color: $text-btn-down;
+	}
+
+	&:disabled {
+		background-color: $bg-input-hover;
+	}
+}
+
+.popup__overlay {
+	position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  // overflow: hidden; повесить на page, когда открыт оверлей
+  z-index: 20;
+
+  &--closed {
+		display: none;
+	}
+}

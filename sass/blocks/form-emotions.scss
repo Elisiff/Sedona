@@ -1,0 +1,45 @@
+.form-emotions {
+	padding: 3px 6.25% 47px 6.25%;
+}
+
+.form-emotions__textarea {
+	width: 100%;
+	min-height: 160px;
+	padding: 20px;
+	border: none;
+	resize: none;
+	background-color: $bg-input;
+
+	&::-webkit-input-placeholder {
+    @include text(700, normal, 16px, 26px, $text-black);
+  }
+
+  &::-moz-placeholder {
+    @include text(700, normal, 16px, 26px, $text-black);
+  }
+
+  &:-moz-placeholder {
+    @include text(700, normal, 16px, 26px, $text-black);
+  }
+
+  &:-ms-input-placeholder {
+    @include text(700, normal, 16px, 26px, $text-black);
+  }
+
+  &:hover {
+  	background-color: $bg-input-hover;
+  }
+
+  &:active {
+  	background-color: $bg-white;
+  	box-shadow: inset 4px 4px 0 0 $bg-input-hover,
+  							inset -4px -4px 0 0 $bg-input-hover;
+  	outline: none;
+  }
+
+  &:focus {
+		background-color: $bg-white;
+  	box-shadow: inset 4px 4px 0 0 $bg-input-hover,
+  							inset -4px -4px 0 0 $bg-input-hover;
+  }
+}

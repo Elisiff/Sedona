@@ -32,6 +32,23 @@
   &:-ms-input-placeholder {
     @include text(700, normal, 16px, 26px, $text-black);
   }
+
+  &:hover {
+  	background-color: $bg-input-hover;
+  }
+
+  &:active {
+  	background-color: $bg-white;
+  	box-shadow: inset 4px 4px 0 0 $bg-input-hover,
+  							inset -4px -4px 0 0 $bg-input-hover;
+  	outline: none;
+  }
+
+  &:focus {
+		background-color: $bg-white;
+  	box-shadow: inset 4px 4px 0 0 $bg-input-hover,
+  							inset -4px -4px 0 0 $bg-input-hover;
+  }
 }
 
 .review-form__new-string {
@@ -39,13 +56,32 @@
 }
 
 .review-form__submit {
-
+	padding: 0 6.25% 38px 6.25%;
 }
 
 .review-form__submit-btn {
+	width: 100%;
+	padding: 16px 0;
+	@include text(700, normal, 21px, 26px, $text-white);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $bg-blue;
+	cursor: pointer;
 
+	&:hover {
+		background-color: $bg-blue-hover;
+	}
+
+	&:active {
+		background-color: $bg-blue-down;
+		color: $text-btn-down;
+	}
+
+	&:disabled {
+		background-color: $bg-input-hover;
+	}
 }
 
 .review-form__necessarily {
-
+	display: none;
 }

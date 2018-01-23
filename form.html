@@ -177,7 +177,7 @@
 
 			<!-- Модальные окна -->
 			<section class="popup__success  popup__success--closed">
-        <b class="popup__success-title">Ваш отзыв отправлен!</b>
+        <b class="popup__success-title">Ваш отзыв отправлен<span>!</span></b>
         <p class="popup__success-desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         <div class="popup__success-wrapper">
           <button type="button" class="popup__success-btn">Закрыть окно
@@ -186,12 +186,14 @@
       </section>
 
       <section class="popup__failure  popup__failure--closed">
-        <b class="popup__failure-title">Что-то пошло не так!</b>
+        <b class="popup__failure-title">Что-то пошло не так<span>!</span></b>
         <p class="popup__failure-desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button type="button" class="popup__failure-btn">Ок</button>
+        <div class="popup__failure-wrapper">
+        	<button type="button" class="popup__failure-btn">Ок</button>
+        </div>
       </section>
 
-       <div class="popup__overlay"></div>
+       <div class="popup__overlay  popup__overlay--closed"></div>
 		</form>
 	</main>
 
