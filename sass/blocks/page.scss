@@ -8,7 +8,7 @@
 
 .page {
   min-width: 320px;
-  max-width: 320px;
+  //max-width: 320px;
   width: auto;
   min-height: 100%;
   box-sizing: border-box;
@@ -20,9 +20,11 @@
   -ms-overflow-style: scrollbar; // Фиксированный скроллбар
   -ms-text-size-adjust: 100%; // Задаем правильное масштабирование текста для IE на мобильных устройствах
 
-  // @media print, #{$tablet} {
-  // min-width: 768px;
-  // }
+  @media print, #{$tablet} {
+    min-width: 768px;
+    max-width: 768px;
+    // max-width: 1199px;
+  }
 
   // @media print, #{$desktop} {
   // min-width: 1200px;
