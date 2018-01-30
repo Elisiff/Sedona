@@ -1592,7 +1592,7 @@ button {
   @media print, (min-width: 768px) {
     .page {
       min-width: 768px;
-      max-width: 768px; } }
+      max-width: 1200px; } }
   @media (min-width: 768px), print {
   .main-nav__menu {
     display: -webkit-box;
@@ -1652,6 +1652,18 @@ button {
   .main-nav__open-btn,
   .main-nav__close-btn {
     display: none; } }
+  @media (min-width: 1200px), print {
+  .main-nav__item:nth-child(2) a {
+    padding: 15px 29px 15px 40px; }
+  .main-nav__item:nth-child(3) a {
+    padding: 15px 42px 15px 30px; }
+  .main-nav__opener {
+    width: 188px; }
+  .main-nav__logo-wrapper {
+    width: 188px; }
+  .main-nav__logo {
+    width: 188px;
+    height: auto; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }
