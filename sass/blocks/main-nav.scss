@@ -222,25 +222,25 @@
   }
 }
 
-@media #{$desktop}, print {
-  .main-nav__item:nth-child(2) a {
-    padding: 15px 29px 15px 40px;  
-  }
+// @media #{$desktop}, print {
+//   .main-nav__item:nth-child(2) a {
+//     padding: 15px 29px 15px 40px;  
+//   }
 
-  .main-nav__item:nth-child(3) a {
-    padding: 15px 42px 15px 30px;
-  }
+//   .main-nav__item:nth-child(3) a {
+//     padding: 15px 42px 15px 30px;
+//   }
 
-  .main-nav__opener {
-    width: 188px;
-  }
+//   .main-nav__opener {
+//     width: 188px;
+//   }
 
-  .main-nav__logo-wrapper {
-    width: 188px;
-  }
+//   .main-nav__logo-wrapper {
+//     width: 188px;
+//   }
 
-  .main-nav__logo {
-    width: 188px;
-    height: auto;
-  }
-}
+//   .main-nav__logo {
+//     width: 188px;
+//     height: auto;
+//   }
+// }

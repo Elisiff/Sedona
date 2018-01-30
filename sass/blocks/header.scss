@@ -65,3 +65,49 @@
 	  background-size: 229px 39px;
   }
 }
+
+@media #{$tablet}, print {
+	.header {
+		background-image: url("../img/bg-back-tablet@1x.jpg");
+	
+		&--index {
+			min-height: 517px;
+	
+			&::before {
+				background-image: url("../img/icons-svg/bg-intro-triangle-tablet.svg");
+			}
+		}
+	
+		&--other {
+			min-height: 289px;
+	
+			&::before {
+				background-image: url("../img/icons-svg/bg-intro-triangle-tablet.svg");
+			}
+		}
+	}
+
+	@media #{$retina} {
+		.header {
+			background-image: url("../img/bg-back-tablet@2x.jpg");
+		}
+	}
+
+	.header__text {
+		margin: 0 auto;
+	
+		&--index {
+			width: 460px;
+			height: 500px;	
+			background-size: 460px auto;
+			transform: translate(0, -15px);
+		}
+	
+		&--other {
+			width: 458px;
+			height: 150px;
+			background-size: 458px auto;
+			transform: translate(0, 42px);
+		}
+	}
+}

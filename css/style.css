@@ -1592,7 +1592,7 @@ button {
   @media print, (min-width: 768px) {
     .page {
       min-width: 768px;
-      max-width: 1200px; } }
+      max-width: 768px; } }
   @media (min-width: 768px), print {
   .main-nav__menu {
     display: -webkit-box;
@@ -1651,24 +1651,39 @@ button {
     margin-top: -56px; }
   .main-nav__open-btn,
   .main-nav__close-btn {
-    display: none; } }
-  @media (min-width: 1200px), print {
-  .main-nav__item:nth-child(2) a {
-    padding: 15px 29px 15px 40px; }
-  .main-nav__item:nth-child(3) a {
-    padding: 15px 42px 15px 30px; }
-  .main-nav__opener {
-    width: 188px; }
-  .main-nav__logo-wrapper {
-    width: 188px; }
-  .main-nav__logo {
-    width: 188px;
-    height: auto; } }
+    display: none; }
+  .header {
+    background-image: url("../img/bg-back-tablet@1x.jpg"); }
+    .header--index {
+      min-height: 517px; }
+      .header--index::before {
+        background-image: url("../img/icons-svg/bg-intro-triangle-tablet.svg"); }
+    .header--other {
+      min-height: 289px; }
+      .header--other::before {
+        background-image: url("../img/icons-svg/bg-intro-triangle-tablet.svg"); }
+  .header__text {
+    margin: 0 auto; }
+    .header__text--index {
+      width: 460px;
+      height: 500px;
+      background-size: 460px auto;
+      -webkit-transform: translate(0, -15px);
+              transform: translate(0, -15px); }
+    .header__text--other {
+      width: 458px;
+      height: 150px;
+      background-size: 458px auto;
+      -webkit-transform: translate(0, 42px);
+              transform: translate(0, 42px); } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }
   .map {
     background-image: url("../img/bg-map-tablet@2x.jpg"); } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), print and (-webkit-min-device-pixel-ratio: 1.5), print and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx), print and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/bg-back-tablet@2x.jpg"); } }
   @media print {
   *,
   *:before,
