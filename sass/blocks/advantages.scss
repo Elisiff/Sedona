@@ -2,17 +2,17 @@
 	background-color: $bg-gray;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 27px 20px 0 20px;
+	padding: 27px 40px 0 40px;
 }
 
 .advantages__reason:nth-child(1) .advantages__desc {
 	padding-top: 56px;
-	background-color: $bg-blue
+	background-color: $bg-blue;
 }
 
-.advantages__reason:nth-child(2) .advantages__desc {
+.advantages__reason:nth-child(3) .advantages__desc {
 	padding-top: 38px;
-	background-color: $bg-blue
+	background-color: $bg-blue;
 }
 
 .advantages__title {
@@ -31,7 +31,7 @@
 }
 
 .advantages__reason:nth-child(1) .advantages__about,
-.advantages__reason:nth-child(2) .advantages__about {
+.advantages__reason:nth-child(3) .advantages__about {
 	padding: 0 0 40px 0;
 	border-bottom: none;
 }
@@ -46,22 +46,19 @@
 	color: $text-white;
 }
 
-.advantages__reason:nth-child(2) .advantages__title, 
-.advantages__reason:nth-child(2) .advantages__count, 
-.advantages__reason:nth-child(2) .advantages__about {
+.advantages__reason:nth-child(3) .advantages__title, 
+.advantages__reason:nth-child(3) .advantages__count, 
+.advantages__reason:nth-child(3) .advantages__about {
 	color: $text-white;
 }
 
 .advantages__photo-wrapper {
-	max-width: 768px;
-	width: 100%;
 	height: 260px;
-	margin: 0 auto;
 	overflow: hidden;
 	background-color: $bg-white;
 }
 
-.advantages__reason:nth-child(2) .advantages__photo-wrapper {
+.advantages__reason:nth-child(3) .advantages__photo-wrapper {
 	background-color: $bg-gray;
 }
 
@@ -130,4 +127,54 @@
 .advantages__item-desc p {
 	padding-top: 15px;
 	@include text(400, normal, 14px, 21px, $text-gray);
+}
+
+@media #{$tablet}, print {
+	.advantages {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.advantages__reason {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.advantages__photo-wrapper {
+		flex: 0 0 512px;
+		width: 512px;
+		height: 256px;
+	}
+
+	.advantages__reason:nth-child(3) .advantages__photo-wrapper {
+		order: 1;
+	}
+
+	.advantages__reason:nth-child(3) .advantages__desc {
+		order: 2;
+	}
+
+	.advantages__desc {
+		padding: 27px 42px 0 42px;
+	}
+	
+	.advantages__reason:nth-child(1) .advantages__desc {
+		padding-top: 45px;
+	}
+	
+	.advantages__reason:nth-child(3) .advantages__desc {
+		padding-top: 38px;
+	}
+	
+	.advantages__title {
+		@include text(700, normal, 21px, 26px);
+	}
+
+	.advantages__count {
+		padding-bottom: 21px;
+	}
+
+	.advantages__reason .advantages__about {
+		border-bottom: none;
+	}
 }

@@ -691,7 +691,7 @@ button {
     line-height: 26px;
     color: #333333; }
   .main-title__desc--media {
-    padding: 0 6.25% 26px 6.25%;
+    padding: 0 20.83% 26px 20.83%;
     border-bottom: 1px solid #e5e5e5;
     font-weight: 400;
     font-style: normal;
@@ -699,7 +699,7 @@ button {
     line-height: 24px;
     color: #333333; }
   .main-title__desc--form {
-    padding: 0 6.25% 18px 6.25%;
+    padding: 0 20.83% 18px 20.83%;
     border-bottom: 1px solid #e5e5e5;
     font-weight: 400;
     font-style: normal;
@@ -711,13 +711,13 @@ button {
   background-color: #eeeeee;
   text-align: center;
   text-transform: uppercase;
-  padding: 27px 20px 0 20px; }
+  padding: 27px 40px 0 40px; }
 
 .advantages__reason:nth-child(1) .advantages__desc {
   padding-top: 56px;
   background-color: #81b3d2; }
 
-.advantages__reason:nth-child(2) .advantages__desc {
+.advantages__reason:nth-child(3) .advantages__desc {
   padding-top: 38px;
   background-color: #81b3d2; }
 
@@ -746,7 +746,7 @@ button {
   color: #333333; }
 
 .advantages__reason:nth-child(1) .advantages__about,
-.advantages__reason:nth-child(2) .advantages__about {
+.advantages__reason:nth-child(3) .advantages__about {
   padding: 0 0 40px 0;
   border-bottom: none; }
 
@@ -758,20 +758,17 @@ button {
 .advantages__reason:nth-child(1) .advantages__about {
   color: #ffffff; }
 
-.advantages__reason:nth-child(2) .advantages__title,
-.advantages__reason:nth-child(2) .advantages__count,
-.advantages__reason:nth-child(2) .advantages__about {
+.advantages__reason:nth-child(3) .advantages__title,
+.advantages__reason:nth-child(3) .advantages__count,
+.advantages__reason:nth-child(3) .advantages__about {
   color: #ffffff; }
 
 .advantages__photo-wrapper {
-  max-width: 768px;
-  width: 100%;
   height: 260px;
-  margin: 0 auto;
   overflow: hidden;
   background-color: #ffffff; }
 
-.advantages__reason:nth-child(2) .advantages__photo-wrapper {
+.advantages__reason:nth-child(3) .advantages__photo-wrapper {
   background-color: #eeeeee; }
 
 .advantages__photo {
@@ -1675,7 +1672,71 @@ button {
       height: 150px;
       background-size: 458px auto;
       -webkit-transform: translate(0, 42px);
-              transform: translate(0, 42px); } }
+              transform: translate(0, 42px); }
+  .main-title::after {
+    display: none; }
+  .main-title__name {
+    padding: 50px 20.83% 24px 20.83%;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000; }
+    .main-title__name--other {
+      padding-top: 74px;
+      padding-bottom: 31px;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 30px;
+      line-height: 26px;
+      color: #000000; }
+  .main-title__desc--index {
+    padding-top: 4px;
+    padding-bottom: 50px; }
+  .main-title__desc--media, .main-title__desc--form {
+    padding: 0 20.83% 47px 20.83%;
+    border-bottom: none; }
+  .advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .advantages__reason {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+  .advantages__photo-wrapper {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 512px;
+            flex: 0 0 512px;
+    width: 512px;
+    height: 256px; }
+  .advantages__reason:nth-child(3) .advantages__photo-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .advantages__reason:nth-child(3) .advantages__desc {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+  .advantages__desc {
+    padding: 27px 42px 0 42px; }
+  .advantages__reason:nth-child(1) .advantages__desc {
+    padding-top: 45px; }
+  .advantages__reason:nth-child(3) .advantages__desc {
+    padding-top: 38px; }
+  .advantages__title {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 26px; }
+  .advantages__count {
+    padding-bottom: 21px; }
+  .advantages__reason .advantages__about {
+    border-bottom: none; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

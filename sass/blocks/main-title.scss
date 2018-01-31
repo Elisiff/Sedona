@@ -4,12 +4,12 @@
 	&::after {
 		@include pos;
 		bottom: -17px;
-    right: 0;
-    width: 100%;
-    height: 37px;
-    background-image: url("../img/icons-svg/bg-triangle.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 37px;
+		right: 0;
+		width: 100%;
+		height: 37px;
+		background-image: url("../img/icons-svg/bg-triangle.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 37px;
 	}
 }
 
@@ -32,14 +32,47 @@
 	}
 
 	&--media {
-		padding: 0 6.25% 26px 6.25%;
+		padding: 0 20.83% 26px 20.83%;
 		border-bottom: 1px solid $bg-input-hover;
 		@include text(400, normal, 14px, 24px, $text-gray);
 	}
 
 	&--form {
-		padding: 0 6.25% 18px 6.25%;
+		padding: 0 20.83% 18px 20.83%;
 		border-bottom: 1px solid $bg-input-hover;
 		@include text(400, normal, 14px, 24px, $text-gray);
+	}
+}
+
+@media #{$tablet}, print {
+	.main-title {
+	
+		&::after {
+			display: none;
+		}
+	}
+
+	.main-title__name {
+		padding: 50px 20.83% 24px 20.83%;
+		@include text(700, normal, 21px, 26px, $text-black);
+
+		&--other {
+			padding-top: 74px;
+			padding-bottom: 31px;
+			@include text(700, normal, 30px, 26px, $text-black);
+		}
+	}
+
+	.main-title__desc {
+
+		&--index {
+			padding-top: 4px;
+			padding-bottom: 50px;
+		}
+
+		&--media, &--form {
+			padding: 0 20.83% 47px 20.83%;
+			border-bottom: none;
+		}
 	}
 }
