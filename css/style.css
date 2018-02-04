@@ -836,7 +836,7 @@ button {
   color: #333333; }
 
 .hotels {
-  padding: 29px 6.25% 48px 6.25%;
+  padding: 29px 20.18229% 48px 20.18229%;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1827,7 +1827,17 @@ button {
     line-height: 26px;
     color: #000000; }
   .advantages__item-desc p {
-    padding: 19px 44px 0 44px; } }
+    padding: 19px 44px 0 44px; }
+  .hotels {
+    padding: 56px 20.18229% 59px 20.18229%; }
+  .hotels__title {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 26px;
+    color: #000000; }
+  .hotels__deals {
+    padding: 27px 0 42px 0; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

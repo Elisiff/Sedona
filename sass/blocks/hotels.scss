@@ -1,5 +1,5 @@
 .hotels {
-	padding: 29px 6.25% 48px 6.25%;
+	padding: 29px 20.18229% 48px 20.18229%;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -36,5 +36,19 @@
 		&:disabled {
 			background-color: $bg-input-hover;
 		}
+	}
+}
+
+@media #{$tablet}, print {
+	.hotels {
+		padding: 56px 20.18229% 59px 20.18229%;
+	}
+
+	.hotels__title {
+		@include text(700, normal, 30px, 26px, $text-black);
+	}
+
+	.hotels__deals {
+		padding: 27px 0 42px 0;
 	}
 }
