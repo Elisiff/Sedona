@@ -26,3 +26,21 @@
     background-image: url("../img/bg-map-tablet@2x.jpg");
   }
 }
+
+@media #{$tablet}, print {
+	.map {
+		max-width: 1200px; 
+		background-image: url("../img/bg-map-desktop@1x.jpg");
+
+		&::after {
+			top: 46.8%;
+			left: 48.7%;
+		}
+	}
+
+	@media #{$retina} {
+		.map {
+			background-image: url("../img/bg-map-desktop@2x.jpg");
+		}
+	}
+}

@@ -52,3 +52,10 @@
 	height: 46%;
 	fill: $bg-white;
 }
+
+@media #{$tablet}, print {
+	.social {
+		margin-top: 0;
+		margin-right: 7px;
+	}
+}

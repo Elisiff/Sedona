@@ -39,3 +39,19 @@
 		fill: #b2b2b2;
 	}
 }
+
+@media #{$tablet}, print {
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 36px 7.8125% 36px 7.8125%;
+	}
+
+	.footer__visitsedona {
+		padding-top: 10px;
+	}
+	
+	.footer__copyright {
+		padding-top: 10px;
+	}
+}

@@ -1837,7 +1837,28 @@ button {
     line-height: 26px;
     color: #000000; }
   .hotels__deals {
-    padding: 27px 0 42px 0; } }
+    padding: 27px 0 42px 0; }
+  .map {
+    max-width: 1200px;
+    background-image: url("../img/bg-map-desktop@1x.jpg"); }
+    .map::after {
+      top: 46.8%;
+      left: 48.7%; }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 36px 7.8125% 36px 7.8125%; }
+  .footer__visitsedona {
+    padding-top: 10px; }
+  .footer__copyright {
+    padding-top: 10px; }
+  .social {
+    margin-top: 0;
+    margin-right: 7px; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }
@@ -1845,7 +1866,9 @@ button {
     background-image: url("../img/bg-map-tablet@2x.jpg"); } }
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), print and (-webkit-min-device-pixel-ratio: 1.5), print and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx), print and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-back-tablet@2x.jpg"); } }
+    background-image: url("../img/bg-back-tablet@2x.jpg"); }
+  .map {
+    background-image: url("../img/bg-map-desktop@2x.jpg"); } }
   @media print {
   *,
   *:before,
