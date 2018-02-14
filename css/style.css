@@ -996,7 +996,12 @@ button {
           justify-content: center; }
 
 .photo__item {
-  padding: 22px 6.25% 17px 6.25%; }
+  padding: 22px 60px 17px 60px; }
+
+.photo__pic {
+  display: block;
+  width: 280px;
+  height: 280px; }
 
 .photo__desc {
   padding: 16px 0 0 0; }
@@ -1046,7 +1051,7 @@ button {
   margin-bottom: -5px; }
 
 .video__desc {
-  padding: 34px 6.25% 35px 6.25%;
+  padding: 34px 25.07% 35px 25.07%;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1072,7 +1077,7 @@ button {
   height: auto; }
 
 .video__controls {
-  padding: 0 6.25%; }
+  padding: 0 25.07%; }
 
 .video__bar-wrapper {
   position: relative;
@@ -1858,7 +1863,69 @@ button {
     padding-top: 10px; }
   .social {
     margin-top: 0;
-    margin-right: 7px; } }
+    margin-right: 7px; }
+  .photo {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 22px 7.8125% 0 7.8125%; }
+  .photo__item {
+    margin: 0;
+    padding: 0; }
+  .photo__item:first-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%; }
+  .photo__pic {
+    width: 324px;
+    height: 267px; }
+  .photo__item:first-child .photo__pic {
+    width: 100%;
+    height: auto; }
+  .photo__item:first-child .photo__pic > img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .photo__item:nth-of-type(odd) .photo__desc {
+    background-color: #eaeaea; }
+  .photo__item:nth-of-type(even) .photo__desc {
+    background-color: #f2f2f2; }
+  .photo__item:first-child .photo__desc {
+    width: 100%; }
+  .photo__desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 324px;
+    padding: 16px 20px; }
+  .photo__likes {
+    padding-top: 12px; }
+  .photo__likes-count {
+    min-width: 32px;
+    max-width: 70px;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .photo__line {
+    display: none;
+    width: 0;
+    height: 0; }
+  .video__desc {
+    padding: 66px 22% 72px 22%; }
+  .video__title {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 26px;
+    color: #000000; }
+  .video__text {
+    padding-top: 27px; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

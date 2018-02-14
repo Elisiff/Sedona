@@ -3,7 +3,7 @@
 }
 
 .video__desc {
-	padding: 34px 6.25% 35px 6.25%;
+	padding: 34px 25.07% 35px 25.07%;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -25,7 +25,7 @@
 }
 
 .video__controls {
-	padding: 0 6.25%;
+	padding: 0 25.07%;
 }
 
 .video__bar-wrapper {
@@ -106,4 +106,18 @@
 .video__fullscreen {
 	width: 20px;
 	height: 20px;
+}
+
+@media #{$tablet}, print {
+	.video__desc {
+		padding: 66px 22% 72px 22%;
+	}
+	
+	.video__title {
+		@include text(700, normal, 30px, 26px, $text-black);
+	}
+	
+	.video__text {
+		padding-top: 27px;
+	}
 }
