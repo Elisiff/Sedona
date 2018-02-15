@@ -50,4 +50,37 @@
 
 .form-impression__item .form-impression__radio-indicator:active::after {
 	background-color: $bg-indicator-down;
-} 
+}
+
+@media #{$tablet}, print {
+	.form-impression {
+    order: 1;
+    width: 50%;
+    padding: 0 0 14px 0;
+    border-bottom: none;
+    border-right: 1px solid $bg-input-hover;
+  }
+  
+  .form-impression__title {
+    margin-top: -6px;
+    margin-bottom: 58px;
+    text-align: left;
+  }
+
+  .form-impression__item {
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: -14px;
+    }
+  }
+
+  .form-impression__radio-indicator {
+    margin-right: 20px;
+  }
+
+  .form-impression__radio:checked + .form-impression__radio-indicator::after {
+    @include pos;
+    left: 30.7%; 
+  }
+}

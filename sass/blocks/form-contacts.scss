@@ -53,3 +53,10 @@
 	@include text(400, normal, 14px, 26px, #ff5c5c);
 	// visibility: hidden;
 }
+
+@media #{$tablet}, print {
+	.form-contacts {
+		order: 3;
+		padding: 3px 0 29px 0;
+	}
+}

@@ -43,3 +43,10 @@
   							inset -4px -4px 0 0 $bg-input-hover;
   }
 }
+
+@media #{$tablet}, print {
+	.form-emotions {
+    order: 5;
+    padding: 3px 0 47px 0;
+	}
+}

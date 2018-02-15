@@ -85,3 +85,20 @@
 .review-form__necessarily {
 	display: none;
 }
+
+@media #{$tablet}, print {
+	.review-form {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 33px 7.8125% 0 7.8125%;
+	}
+
+	.review-form__subtitle {
+		@include text(700, normal, 21px, 26px, $text-black);
+	}
+
+	.review-form__submit {
+		order: 6;
+		padding: 0 0 38px 0;
+	}
+}

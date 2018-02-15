@@ -52,4 +52,11 @@
 
 .form-sights__item .form-sights__checkbox-indicator:active::after {
 	background-image: url("../img/icons-svg/icon-tick--a.svg");
-} 
+}
+
+@media #{$tablet}, print {
+	.form-sights {
+    order: 4;
+    padding: 3px 0 3px 0;
+	}
+}

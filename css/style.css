@@ -1988,7 +1988,81 @@ button {
     .video__btn:active {
       fill: #b2b2b2; }
   .video__btns-wrapper {
-    z-index: 10; } }
+    z-index: 10; }
+  .review-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 33px 7.8125% 0 7.8125%; }
+  .review-form__subtitle {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000; }
+  .review-form__submit {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+    padding: 0 0 38px 0; }
+  .form-intro {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 50%;
+    padding: 0 0 0 57px;
+    border-bottom: none; }
+  .form-intro__title {
+    margin-top: -6px;
+    margin-bottom: 52px;
+    text-align: left; }
+  .form-intro__input {
+    width: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    margin-left: 16px; }
+    .form-intro__input:last-child {
+      margin-bottom: 0; }
+  .form-contacts {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    padding: 3px 0 29px 0; }
+  .form-impression {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50%;
+    padding: 0 0 14px 0;
+    border-bottom: none;
+    border-right: 1px solid #e5e5e5; }
+  .form-impression__title {
+    margin-top: -6px;
+    margin-bottom: 58px;
+    text-align: left; }
+  .form-impression__item {
+    margin-bottom: 22px; }
+    .form-impression__item:last-child {
+      margin-bottom: -14px; }
+  .form-impression__radio-indicator {
+    margin-right: 20px; }
+  .form-impression__radio:checked + .form-impression__radio-indicator::after {
+    content: "";
+    position: absolute;
+    left: 30.7%; }
+  .form-sights {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    padding: 3px 0 3px 0; }
+  .form-emotions {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    padding: 3px 0 47px 0; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }
