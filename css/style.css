@@ -1048,6 +1048,7 @@ button {
   background-color: #e5e5e5; }
 
 .video {
+  position: relative;
   margin-bottom: -5px; }
 
 .video__desc {
@@ -1077,7 +1078,7 @@ button {
   height: auto; }
 
 .video__controls {
-  padding: 0 25.07%; }
+  padding: 0 20px; }
 
 .video__bar-wrapper {
   position: relative;
@@ -1133,6 +1134,7 @@ button {
 
 .video__btn {
   fill: #5c6870;
+  z-index: 10;
   cursor: pointer; }
   .video__btn:hover {
     fill: #333333; }
@@ -1860,10 +1862,12 @@ button {
   .footer__visitsedona {
     padding-top: 10px; }
   .footer__copyright {
-    padding-top: 10px; }
+    padding-top: 10px;
+    z-index: 10; }
   .social {
     margin-top: 0;
-    margin-right: 7px; }
+    margin-right: 7px;
+    z-index: 10; }
   .photo {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1916,6 +1920,8 @@ button {
     display: none;
     width: 0;
     height: 0; }
+  .video {
+    margin-bottom: 42px; }
   .video__desc {
     padding: 66px 22% 72px 22%; }
   .video__title {
@@ -1925,7 +1931,64 @@ button {
     line-height: 26px;
     color: #000000; }
   .video__text {
-    padding-top: 27px; } }
+    padding-top: 27px; }
+  .video__presentation {
+    display: block;
+    padding: 0 7.8125%; }
+  .video__controls {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 0 7.8125%; }
+  .video__bar-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    z-index: 10;
+    padding: 23px 5px 19px 3px;
+    margin: 0 160px 0 90px;
+    -webkit-transform: translate(0, -355%);
+            transform: translate(0, -355%);
+    background-color: transparent; }
+    .video__bar-wrapper::after {
+      display: none; }
+  .video__bar {
+    background-color: rgba(255, 255, 255, 0.3); }
+    .video__bar::after {
+      background-color: rgba(80, 76, 74, 0.2); }
+  .video__toggle {
+    left: 28.9%; }
+  .video__btns {
+    position: relative;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 35px 41px 30px 35px;
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+    background-color: rgba(0, 0, 0, 0.6); }
+    .video__btns::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(80, 76, 74, 0.2); }
+  .video__btn {
+    fill: #ffffff; }
+    .video__btn:hover {
+      fill: #81b3d2; }
+    .video__btn:active {
+      fill: #b2b2b2; }
+  .video__btns-wrapper {
+    z-index: 10; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

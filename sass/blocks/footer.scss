@@ -44,7 +44,7 @@
 	.footer {
 		display: flex;
 		justify-content: space-between;
-		padding: 36px 7.8125% 36px 7.8125%;
+		padding: 36px 7.8125% 36px 7.8125%;	
 	}
 
 	.footer__visitsedona {
@@ -53,5 +53,6 @@
 	
 	.footer__copyright {
 		padding-top: 10px;
+		z-index: 10;
 	}
 }
