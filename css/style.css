@@ -421,6 +421,9 @@ template {
 @-ms-viewport {
   width: device-width; }
 
+html {
+  background-color: #ffffff; }
+
 .page {
   min-width: 320px;
   width: auto;
@@ -1591,10 +1594,17 @@ button {
   z-index: 20; }
   .popup__overlay--closed {
     display: none; }
+  @media print, (min-width: 1200px) {
+    html {
+      background-color: #f2f2f2; }
+    .page {
+      min-width: 1200px;
+      max-width: 1200px;
+      -webkit-box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+              box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2); } }
   @media print, (min-width: 768px) {
     .page {
-      min-width: 768px;
-      max-width: 768px; } }
+      min-width: 768px; } }
   @media (min-width: 768px), print {
   .main-nav__menu {
     display: -webkit-box;
@@ -2169,6 +2179,34 @@ button {
     font-size: 21px;
     line-height: 26px;
     color: #ffffff; } }
+  @media (min-width: 1200px), print {
+  .main-nav__item:nth-child(2) a {
+    padding: 15px 29px 15px 40px; }
+  .main-nav__item:nth-child(3) a {
+    padding: 15px 42px 15px 30px; }
+  .main-nav__opener {
+    width: 188px; }
+  .main-nav__logo-wrapper {
+    width: 188px; }
+  .main-nav__logo {
+    width: 188px;
+    height: auto; }
+  .header {
+    background-image: url("../img/bg-back-desktop@1x.jpg"); }
+    .header--index {
+      min-height: 517px; }
+      .header--index::before {
+        background-image: url("../img/icons-svg/bg-intro-triangle-desktop.svg"); }
+    .header--other {
+      min-height: 300px; }
+      .header--other::before {
+        background-image: url("../img/icons-svg/bg-intro-triangle-desktop.svg"); }
+  .header__text--index {
+    -webkit-transform: translate(0, -12px);
+            transform: translate(0, -12px); }
+  .header__text--other {
+    -webkit-transform: translate(0, 51px);
+            transform: translate(0, 51px); } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }
@@ -2179,6 +2217,9 @@ button {
     background-image: url("../img/bg-back-tablet@2x.jpg"); }
   .map {
     background-image: url("../img/bg-map-desktop@2x.jpg"); } }
+  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), print and (-webkit-min-device-pixel-ratio: 1.5), print and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx), print and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/bg-back-desktop@2x.jpg"); } }
   @media print {
   *,
   *:before,
