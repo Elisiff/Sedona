@@ -1,6 +1,11 @@
 .form-contacts {
 	padding: 3px 6.25% 29px 6.25%;
+	width: 100%;
 	border-bottom: 1px solid $bg-input-hover;
+}
+
+.form-contacts__title {
+	margin-bottom: 20px;
 }
 
 .form-contacts__wrapper {
@@ -10,10 +15,6 @@
 	input:last-of-type {
 		margin-bottom: 0;
 	}
-}
-
-.form-contacts__title {
-	margin-bottom: 20px;
 }
 
 .form-contacts__label {
@@ -57,6 +58,30 @@
 @media #{$tablet}, print {
 	.form-contacts {
 		order: 3;
-		padding: 3px 0 29px 0;
+		margin-top: 82px;
+		padding: 0;
+		border-top: 1px solid $bg-input-hover;
+		border-bottom: none;
+	}
+
+	.form-contacts__title {
+		display: block;
+		margin: -14px auto 25px auto;
+		width: 400px;
+		background-color: $bg-white;
+	}
+
+	.form-contacts__wrapper {
+		position: relative;
+	}
+
+	.form-contacts__input {
+		margin-bottom: 23px;
+	}
+
+	.form-contacts__error {
+		@include pos;
+		top: 0;
+		right: 0;
 	}
 }

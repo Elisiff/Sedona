@@ -101,4 +101,23 @@
 		order: 6;
 		padding: 0 0 38px 0;
 	}
+
+	.review-form__submit {
+		display: flex;
+		justify-content: space-between;
+		padding: 54px 0 61px 0;
+		width: 100%;
+	}
+
+	.review-form__submit-btn {
+		width: auto;
+		padding: 16px 74px 16px 70px;
+	}
+
+	.review-form__necessarily {
+		display: block;
+		margin-right: -2px;
+		padding: 20px 0 0 0;
+		text-transform: uppercase;
+	}
 }

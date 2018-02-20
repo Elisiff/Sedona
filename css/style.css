@@ -1262,7 +1262,11 @@ button {
 
 .form-contacts {
   padding: 3px 6.25% 29px 6.25%;
+  width: 100%;
   border-bottom: 1px solid #e5e5e5; }
+
+.form-contacts__title {
+  margin-bottom: 20px; }
 
 .form-contacts__wrapper {
   display: -webkit-box;
@@ -1272,9 +1276,6 @@ button {
       flex-wrap: wrap; }
   .form-contacts__wrapper input:last-of-type {
     margin-bottom: 0; }
-
-.form-contacts__title {
-  margin-bottom: 20px; }
 
 .form-contacts__label {
   margin-left: 20px; }
@@ -1396,6 +1397,7 @@ button {
   width: 56px;
   height: 56px;
   margin-right: 22px;
+  border-radius: 10%;
   background-color: #f2f2f2;
   cursor: pointer; }
   .form-sights__checkbox-indicator:hover {
@@ -1419,7 +1421,8 @@ button {
   background-image: url("../img/icons-svg/icon-tick--a.svg"); }
 
 .form-emotions {
-  padding: 3px 6.25% 47px 6.25%; }
+  padding: 3px 6.25% 47px 6.25%;
+  width: 100%; }
 
 .form-emotions__textarea {
   width: 100%;
@@ -2007,6 +2010,23 @@ button {
         -ms-flex-order: 6;
             order: 6;
     padding: 0 0 38px 0; }
+  .review-form__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 54px 0 61px 0;
+    width: 100%; }
+  .review-form__submit-btn {
+    width: auto;
+    padding: 16px 74px 16px 70px; }
+  .review-form__necessarily {
+    display: block;
+    margin-right: -2px;
+    padding: 20px 0 0 0;
+    text-transform: uppercase; }
   .form-intro {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -2030,7 +2050,24 @@ button {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    padding: 3px 0 29px 0; }
+    margin-top: 82px;
+    padding: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: none; }
+  .form-contacts__title {
+    display: block;
+    margin: -14px auto 25px auto;
+    width: 400px;
+    background-color: #ffffff; }
+  .form-contacts__wrapper {
+    position: relative; }
+  .form-contacts__input {
+    margin-bottom: 23px; }
+  .form-contacts__error {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; }
   .form-impression {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -2057,12 +2094,81 @@ button {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    padding: 3px 0 3px 0; }
+    margin-top: 78px;
+    padding: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: none; }
+  .form-sights__title {
+    display: block;
+    margin: -26px auto 25px auto;
+    width: 400px;
+    background-color: #ffffff; }
+  .form-sights__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 16px 12% 0 15%; }
+  .form-sights__item {
+    margin-bottom: 32px;
+    padding-right: 0;
+    min-width: 214px; }
   .form-emotions {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
-    padding: 3px 0 47px 0; } }
+    margin-top: 50px;
+    padding: 0;
+    border-top: 1px solid #e5e5e5; }
+  .form-emotions__title {
+    display: block;
+    margin: -15px auto 56px auto;
+    width: 400px;
+    background-color: #ffffff; }
+  .popup__success {
+    top: 35vh;
+    left: 7.8125%;
+    width: 84.375%;
+    padding: 60px 0 0 0; }
+  .popup__success-title {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 26px;
+    color: #000000; }
+  .popup__success-desc {
+    padding: 26px 17% 35px 17%; }
+  .popup__success-wrapper {
+    margin: 0;
+    padding: 44px 14.66%; }
+  .popup__success-btn {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff; }
+  .popup__failure {
+    top: 35vh;
+    left: 23.9583%;
+    width: 52.0834%;
+    padding: 56px 0 35px 0; }
+  .popup__failure-title {
+    display: block;
+    padding: 0 20%;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000; }
+  .popup__failure-desc {
+    padding: 22px 15% 35px 15%; }
+  .popup__failure-wrapper {
+    padding: 0 16.25% 13px 16.25%; }
+  .popup__failure-btn {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

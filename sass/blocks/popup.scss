@@ -130,3 +130,54 @@
 		display: none;
 	}
 }
+
+@media #{$tablet}, print {
+	.popup__success {
+		top: 35vh;
+		left: 7.8125%;
+		width: 84.375%;
+		padding: 60px 0 0 0;
+	}
+
+	.popup__success-title {
+		@include text(700, normal, 30px, 26px, $text-black);
+	}
+
+	.popup__success-desc {
+		padding: 26px 17% 35px 17%;
+	}
+
+	.popup__success-wrapper {
+		margin: 0;
+		padding: 44px 14.66%;
+	}
+
+	.popup__success-btn {
+		@include text(700, normal, 21px, 26px, $text-white);
+	}
+
+	.popup__failure {
+		top: 35vh;
+		left: 23.9583%;
+		width: 52.0834%;
+		padding: 56px 0 35px 0;
+	}
+
+	.popup__failure-title {
+		display: block;
+		padding: 0 20%;
+		@include text(700, normal, 30px, 40px, $text-black);
+	}
+
+	.popup__failure-desc {
+		padding: 22px 15% 35px 15%;
+	}
+
+	.popup__failure-wrapper {
+		padding: 0 16.25% 13px 16.25%;
+	}
+
+	.popup__failure-btn {
+		@include text(700, normal, 21px, 26px, $text-white);
+	}
+}

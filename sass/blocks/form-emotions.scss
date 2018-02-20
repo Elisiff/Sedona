@@ -1,5 +1,6 @@
 .form-emotions {
-	padding: 3px 6.25% 47px 6.25%;
+  padding: 3px 6.25% 47px 6.25%;
+  width: 100%;
 }
 
 .form-emotions__textarea {
@@ -47,6 +48,15 @@
 @media #{$tablet}, print {
 	.form-emotions {
     order: 5;
-    padding: 3px 0 47px 0;
-	}
+    margin-top: 50px;
+    padding: 0;
+    border-top: 1px solid $bg-input-hover;
+  }
+  
+  .form-emotions__title {
+    display: block;
+		margin: -15px auto 56px auto;
+		width: 400px;
+		background-color: $bg-white;
+  }
 }
