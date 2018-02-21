@@ -76,3 +76,21 @@
 		}
 	}
 }
+
+@media #{$desktop}, print {
+	.main-title__name {
+		padding: 50px 30.833% 24px 30.833%;
+
+		&--other {
+			padding-top: 111px;
+			padding-bottom: 31px;
+		}
+	}
+
+	.main-title__desc {
+
+		&--media, &--form {
+			padding: 0 31.667% 49px 31.667%;
+		}
+	}
+}
