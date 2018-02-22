@@ -695,7 +695,7 @@ button {
     line-height: 26px;
     color: #333333; }
   .main-title__desc--media {
-    padding: 0 20.83% 26px 20.83%;
+    padding: 0 6.25% 26px 6.25%;
     border-bottom: 1px solid #e5e5e5;
     font-weight: 400;
     font-style: normal;
@@ -703,7 +703,7 @@ button {
     line-height: 24px;
     color: #333333; }
   .main-title__desc--form {
-    padding: 0 20.83% 18px 20.83%;
+    padding: 0 6.25% 18px 6.25%;
     border-bottom: 1px solid #e5e5e5;
     font-weight: 400;
     font-style: normal;
@@ -840,7 +840,7 @@ button {
   color: #333333; }
 
 .hotels {
-  padding: 29px 371px 48px 371px;
+  padding: 29px 6.25% 48px 6.25%;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1056,7 +1056,7 @@ button {
   margin-bottom: -5px; }
 
 .video__desc {
-  padding: 34px 25.07% 35px 25.07%;
+  padding: 34px 12% 35px 12%;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1851,7 +1851,7 @@ button {
   .advantages__item-desc p {
     padding: 19px 44px 0 44px; }
   .hotels {
-    padding: 56px 371px 59px 371px; }
+    padding: 56px 20.1823% 59px 20.1823%; }
   .hotels__title {
     font-weight: 700;
     font-style: normal;
@@ -1938,7 +1938,7 @@ button {
   .video {
     margin-bottom: 42px; }
   .video__desc {
-    padding: 66px 390px 72px 390px; }
+    padding: 66px 22.79% 72px 22.79%; }
   .video__title {
     font-weight: 700;
     font-style: normal;
@@ -2010,7 +2010,7 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 33px 10% 0 10%; }
+    padding: 33px 7.812% 0 7.812%; }
   .review-form__subtitle {
     font-weight: 700;
     font-style: normal;
