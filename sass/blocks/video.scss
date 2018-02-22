@@ -116,7 +116,7 @@
 	}
 
 	.video__desc {
-		padding: 66px 22% 72px 22%;
+		padding: 66px 390px 72px 390px;
 	}
 	
 	.video__title {
@@ -196,5 +196,27 @@
 
 	.video__btns-wrapper {
 		z-index: 10;
+	}
+}
+
+@media #{$desktop}, print {
+	.video {
+		margin-bottom: 85px;
+	}
+
+	.video__desc {
+		padding: 70px 31.667% 71px 31.667%;
+	}
+
+	.video__presentation {
+		padding: 0 16.667%;
+	}
+
+	.video__controls {
+		padding: 0 16.667%;
+	}
+
+	.video__toggle {
+		left: 20.9%;
 	}
 }

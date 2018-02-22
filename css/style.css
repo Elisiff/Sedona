@@ -1936,7 +1936,7 @@ button {
   .video {
     margin-bottom: 42px; }
   .video__desc {
-    padding: 66px 22% 72px 22%; }
+    padding: 66px 390px 72px 390px; }
   .video__title {
     font-weight: 700;
     font-style: normal;
@@ -2246,7 +2246,36 @@ button {
     padding: 36px 3.5833% 36px 3.5833%; }
   .footer__visitsedona {
     position: relative;
-    left: 90px; } }
+    left: 90px; }
+  .photo {
+    padding: 22px 0 0 0; }
+  .photo__item {
+    position: relative; }
+  .photo__pic {
+    width: 400px;
+    height: 267px; }
+  .photo__desc {
+    position: absolute;
+    width: 400px;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.3) !important; }
+  .photo__title,
+  .photo__author,
+  .photo__likes-count {
+    color: #ffffff; }
+  .photo__likes-icon {
+    fill: #ffffff; }
+  .video {
+    margin-bottom: 85px; }
+  .video__desc {
+    padding: 70px 31.667% 71px 31.667%; }
+  .video__presentation {
+    padding: 0 16.667%; }
+  .video__controls {
+    padding: 0 16.667%; }
+  .video__toggle {
+    left: 20.9%; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

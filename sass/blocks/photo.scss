@@ -121,3 +121,35 @@
 		height: 0;
 	}
 }
+
+@media #{$desktop}, print {
+	.photo {
+		padding: 22px 0 0 0;
+	}
+
+	.photo__item {
+		position: relative;
+	}
+
+	.photo__pic {
+		width: 400px;
+		height: 267px;
+	}
+
+	.photo__desc {
+		position: absolute;
+		width: 400px;
+		transform: translateY(-100%);
+		background-color: $bg-photo-desc !important;
+	}
+
+	.photo__title,
+	.photo__author,
+	.photo__likes-count  {
+		color: $text-white;
+	}
+
+	.photo__likes-icon {
+		fill: $text-white;
+	}
+}
