@@ -425,6 +425,7 @@ html {
   background-color: #ffffff; }
 
 .page {
+  position: relative;
   min-width: 320px;
   width: auto;
   min-height: 100%;
@@ -2320,7 +2321,19 @@ button {
     padding: 16px 0 0 0; }
   .form-sights__item {
     margin-bottom: 30px;
-    min-width: 170px; } }
+    min-width: 170px; }
+  .popup__success {
+    content: "";
+    position: absolute;
+    top: 62%;
+    left: 23.33%;
+    width: 53.34%; }
+  .popup__failure {
+    content: "";
+    position: absolute;
+    top: 62%;
+    left: 33.33%;
+    width: 33.34%; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

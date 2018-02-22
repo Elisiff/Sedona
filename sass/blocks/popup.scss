@@ -181,3 +181,19 @@
 		@include text(700, normal, 21px, 26px, $text-white);
 	}
 }
+
+@media #{$desktop}, print {
+	.popup__success {
+		@include pos();
+		top: 62%;
+		left: 23.33%;
+		width: 53.34%;
+	}
+
+	.popup__failure {
+		@include pos();
+		top: 62%;
+		left: 33.33%;
+		width: 33.34%;
+	}
+}
