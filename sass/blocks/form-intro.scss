@@ -34,3 +34,9 @@
 		}
 	}
 }
+
+@media #{$desktop}, print {
+	.form-intro {
+		padding: 0 0 0 80px;
+	}
+}

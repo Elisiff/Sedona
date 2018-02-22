@@ -84,3 +84,13 @@
     left: 30.7%; 
   }
 }
+
+@media #{$desktop}, print {
+	.form-impression {
+		padding: 0 0 14px 3px;
+  }
+  
+  .form-impression__title {
+    margin-left: 77px;
+  }
+}

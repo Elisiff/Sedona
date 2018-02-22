@@ -90,7 +90,7 @@
 	.review-form {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 33px 7.8125% 0 7.8125%;
+		padding: 33px 10% 0 10%;
 	}
 
 	.review-form__subtitle {
@@ -98,12 +98,8 @@
 	}
 
 	.review-form__submit {
-		order: 6;
-		padding: 0 0 38px 0;
-	}
-
-	.review-form__submit {
 		display: flex;
+		order: 6;
 		justify-content: space-between;
 		padding: 54px 0 61px 0;
 		width: 100%;
@@ -119,5 +115,19 @@
 		margin-right: -2px;
 		padding: 20px 0 0 0;
 		text-transform: uppercase;
+	}
+}
+
+@media #{$desktop}, print {
+	.review-form {
+		padding: 16px 10% 0 10%;
+	}
+
+	.review-form__submit {
+		padding-bottom: 65px;
+	}
+
+	.review-form__submit-btn {
+		padding: 16px 150px 16px 150px;
 	}
 }
