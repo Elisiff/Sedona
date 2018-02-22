@@ -56,3 +56,14 @@
 		z-index: 10;
 	}
 }
+
+@media #{$desktop}, print {
+	.footer {
+		padding: 36px 3.5833% 36px 3.5833%;	
+	}
+
+	.footer__visitsedona {
+		position: relative;
+		left: 90px;
+	}
+}

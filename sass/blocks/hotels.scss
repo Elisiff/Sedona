@@ -1,5 +1,5 @@
 .hotels {
-	padding: 29px 20.18229% 48px 20.18229%;
+	padding: 29px 371px 48px 371px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -41,7 +41,7 @@
 
 @media #{$tablet}, print {
 	.hotels {
-		padding: 56px 20.18229% 59px 20.18229%;
+		padding: 56px 371px 59px 371px;
 	}
 
 	.hotels__title {
@@ -50,5 +50,15 @@
 
 	.hotels__deals {
 		padding: 27px 0 42px 0;
+	}
+}
+
+@media #{$desktop}, print {
+	.hotels {
+		padding: 56px 30.833% 65px 30.833%;
+	}
+
+	.hotels__deals {
+		padding: 27px 0 47px 0;
 	}
 }

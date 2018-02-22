@@ -839,7 +839,7 @@ button {
   color: #333333; }
 
 .hotels {
-  padding: 29px 20.18229% 48px 20.18229%;
+  padding: 29px 371px 48px 371px;
   text-align: center;
   text-transform: uppercase; }
 
@@ -1849,7 +1849,7 @@ button {
   .advantages__item-desc p {
     padding: 19px 44px 0 44px; }
   .hotels {
-    padding: 56px 20.18229% 59px 20.18229%; }
+    padding: 56px 371px 59px 371px; }
   .hotels__title {
     font-weight: 700;
     font-style: normal;
@@ -2234,7 +2234,19 @@ button {
   .advantages__more {
     padding: 34px 0 57px 0; }
   .advantages__item-desc p {
-    padding: 20px 56px 0 56px; } }
+    padding: 20px 56px 0 56px; }
+  .hotels {
+    padding: 56px 30.833% 65px 30.833%; }
+  .hotels__deals {
+    padding: 27px 0 47px 0; }
+  .map::after {
+    top: 46.6%;
+    left: 48.9%; }
+  .footer {
+    padding: 36px 3.5833% 36px 3.5833%; }
+  .footer__visitsedona {
+    position: relative;
+    left: 90px; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
     background-image: url("../img/bg-back-mobile@2x.jpg"); }

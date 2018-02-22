@@ -44,3 +44,13 @@
 		}
 	}
 }
+
+@media #{$desktop}, print {
+	.map {
+
+		&::after {
+			top: 46.6%;
+			left: 48.9%;
+		}
+	}
+}
