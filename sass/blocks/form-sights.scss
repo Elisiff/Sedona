@@ -5,8 +5,9 @@
 }
 
 .form-sights__wrapper {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .form-sights__item {
@@ -73,6 +74,8 @@
   }
 
   .form-sights__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 16px 12% 0 15%;
   }

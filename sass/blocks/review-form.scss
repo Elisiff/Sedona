@@ -1,4 +1,5 @@
 .review-form__subtitle {
+	display: block;
 	@include text(700, normal, 18px, 26px, $text-black);
 	text-align: center;
 	text-transform: uppercase;
@@ -13,8 +14,9 @@
 	flex-grow: 1;
 	margin-left: 14px;
 	margin-bottom: 22px;
-	padding: 20px;
+	padding: 15px 22px;
 	border: none;
+	@include text(700, normal, 16px, 26px, $text-black);
 	background-color: $bg-input;
 
 	&::-webkit-input-placeholder {
@@ -22,11 +24,13 @@
   }
 
   &::-moz-placeholder {
-    @include text(700, normal, 16px, 26px, $text-black);
+		@include text(700, normal, 16px, 26px, $text-black);
+		opacity: 1;
   }
 
   &:-moz-placeholder {
-    @include text(700, normal, 16px, 26px, $text-black);
+		@include text(700, normal, 16px, 26px, $text-black);
+		opacity: 1;
   }
 
   &:-ms-input-placeholder {

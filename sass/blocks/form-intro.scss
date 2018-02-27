@@ -3,11 +3,25 @@
 	border-bottom: 1px solid $bg-input-hover;
 }
 
+.form-intro__title {
+	padding-bottom: 7px;
+}
+
 .form-intro__wrapper {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.form-intro__label {
+	display: flex;
+	flex-wrap: nowrap;
 	align-items: baseline;
-	padding-top: 7px;
+	width: 100%;
+}
+
+.form-intro__input {
+	flex-shrink: 1;
+	min-width: 50px;
 }
 
 @media #{$tablet}, print {
@@ -24,9 +38,16 @@
 		text-align: left;
 	}
 
+	.form-intro__label {
+		margin-bottom: 22px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	.form-intro__input {
 		width: 50%;
-		flex: 1 0 auto;
 		margin-left: 16px;
 
 		&:last-child {

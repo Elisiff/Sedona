@@ -90,14 +90,15 @@
 			<section class="form-intro">
 				<h2 class="form-intro__title  review-form__subtitle">Представьтесь:</h2>
 				<div class="form-intro__wrapper">
-					<label class="form-intro__label  review-form__label" for="form-intro__name-field">Имя*:</label>
-	        <input class="form-intro__input  review-form__input" type="text" name="form-intro__name" id="form-intro__name-field" placeholder="Петр" required>
-	        <div class="review-form__new-string"></div>
-	        <label class="form-intro__label  review-form__label" for="form-intro__surname-field">Фамилия*:</label>
-	        <input class="form-intro__input  review-form__input" type="text" name="form-intro__surname" id="form-intro__surname-field" placeholder="Иванов" required>
-	        <div class="review-form__new-string"></div>
-	        <label class="form-intro__label  review-form__label" for="form-intro__patronymic-field">Отчество:</label>
-	        <input class="form-intro__input  review-form__input" type="text" name="form-intro__patronymic" id="form-intro__patronymic-field" placeholder="Александрович">
+					<label class="form-intro__label  review-form__label" for="form-intro__name-field">Имя*:
+						<input class="form-intro__input  review-form__input" type="text" name="form-intro__name" id="form-intro__name-field" placeholder="Петр" required>
+					</label>
+	        <label class="form-intro__label  review-form__label" for="form-intro__surname-field">Фамилия*:
+						<input class="form-intro__input  review-form__input" type="text" name="form-intro__surname" id="form-intro__surname-field" placeholder="Иванов" required>
+					</label>
+	        <label class="form-intro__label  review-form__label" for="form-intro__patronymic-field">Отчество:
+						<input class="form-intro__input  review-form__input" type="text" name="form-intro__patronymic" id="form-intro__patronymic-field" placeholder="Александрович">
+					</label>
         </div>
 			</section>
 
@@ -107,15 +108,19 @@
 				<div class="form-contacts__wrapper">
 	        <label class="form-contacts__label  review-form__label" for="form-contacts__tel-field"><span>Контактный</span> телефон*:</label>
 	        <div class="review-form__new-string  form-contacts__new-string"></div>
-	        <input class="form-contacts__input  review-form__input" type="tel" name="form-contacts__tel" id="form-contacts__tel-field" placeholder="Введите телефон" required>
-	        <label class="form-contacts__square  form-contacts__square--tel" for="form-contacts__tel-field"></label>
+					<div class="form-contacts__input-wrapper">
+						<input class="form-contacts__input  review-form__input" type="tel" name="form-contacts__tel" id="form-contacts__tel-field" placeholder="Введите телефон" required>
+						<label class="form-contacts__square  form-contacts__square--tel" for="form-contacts__tel-field"></label>
+					</div>
 	        <div class="review-form__new-string  form-contacts__new-string"></div>
 	        <div class="form-contacts__error">Ошибка, перепроверьте номер</div>
 	        <div class="review-form__new-string  form-contacts__new-string"></div>
 	        <label class="form-contacts__label  review-form__label" for="form-contacts__email-field">Электронная почта*:</label>
-	        <div class="review-form__new-string  form-contacts__new-string"></div>
-	        <input class="form-contacts__input  review-form__input" type="email" name="form-contacts__email" id="form-contacts__email-field" placeholder="Введите e-mail" required>
-	        <label class="form-contacts__square  form-contacts__square--mail" for="form-contacts__email-field"></label>
+					<div class="review-form__new-string  form-contacts__new-string"></div>
+					<div class="form-contacts__input-wrapper">
+						<input class="form-contacts__input  review-form__input" type="email" name="form-contacts__email" id="form-contacts__email-field" placeholder="Введите e-mail" required>
+						<label class="form-contacts__square  form-contacts__square--mail" for="form-contacts__email-field"></label>
+					</div>
         </div>
 			</section>
 

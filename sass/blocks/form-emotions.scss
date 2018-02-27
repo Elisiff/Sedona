@@ -8,7 +8,8 @@
 	min-height: 160px;
 	padding: 20px;
 	border: none;
-	resize: none;
+  resize: none;
+  @include text(700, normal, 16px, 26px, $text-black);
 	background-color: $bg-input;
 
 	&::-webkit-input-placeholder {
@@ -17,10 +18,12 @@
 
   &::-moz-placeholder {
     @include text(700, normal, 16px, 26px, $text-black);
+    opacity: 1;
   }
 
   &:-moz-placeholder {
     @include text(700, normal, 16px, 26px, $text-black);
+    opacity: 1;
   }
 
   &:-ms-input-placeholder {
