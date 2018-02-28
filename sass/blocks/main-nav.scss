@@ -139,12 +139,14 @@
 @media #{$tablet}, print {
   .main-nav__menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     background-color: $bg-white;
+    
   }
 
   .main-nav__item {
+    display: inline-block;
     min-width: 19.53125%;
     border-bottom: none;
     box-shadow: none;
