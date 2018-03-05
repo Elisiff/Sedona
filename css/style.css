@@ -615,7 +615,9 @@ button {
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #ffffff;
-  background-size: cover; }
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
   .header--index {
     min-height: 390px; }
     .header--index::before {
@@ -896,7 +898,9 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #ffffff;
-  background-size: auto; }
+  background-size: auto;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
   .map::after {
     content: "";
     position: absolute;
@@ -1391,7 +1395,9 @@ button {
   margin-right: 22px;
   background-color: #f2f2f2;
   border-radius: 50%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
   .form-impression__radio-indicator:hover {
     background-color: #e5e5e5; }
   .form-impression__radio-indicator:active {
@@ -1406,7 +1412,9 @@ button {
   height: 22px;
   border-radius: 50%;
   background-color: #333333;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
 
 .form-impression__item .form-impression__radio-indicator:active::after {
   background-color: #a4a4a4; }
@@ -1453,7 +1461,9 @@ button {
   margin-right: 22px;
   border-radius: 10%;
   background-color: #f2f2f2;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
   .form-sights__checkbox-indicator:hover {
     background-color: #e5e5e5; }
   .form-sights__checkbox-indicator:active {
@@ -1469,7 +1479,9 @@ button {
   background-image: url("../img/icons-svg/icon-tick.svg");
   background-repeat: no-repeat;
   background-size: 24px auto;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact; }
 
 .form-sights__item .form-sights__checkbox-indicator:active::after {
   background-image: url("../img/icons-svg/icon-tick--a.svg"); }
@@ -2426,6 +2438,7 @@ button {
   *,
   *:before,
   *:after {
+    color: #000 !important;
     text-shadow: none !important; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
@@ -2436,7 +2449,9 @@ button {
   thead {
     display: table-header-group; }
   tr,
-  img {
+  img,
+  picture,
+  source {
     page-break-inside: avoid; }
   img {
     max-width: 100% !important; }
@@ -2450,4 +2465,65 @@ button {
     page-break-after: avoid; }
   table {
     page-break-before: always;
-    border-collapse: collapse !important; } }
+    border-collapse: collapse !important; }
+  .page {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
+  .main-nav {
+    display: none; }
+  .header--index::before {
+    display: none; }
+  .header--other::before {
+    display: none; }
+  .hotels__search {
+    display: none; }
+  .advantages > .advantages__reason:nth-child(2),
+  .advantages__more {
+    -webkit-column-break-after: always;
+            break-after: always;
+    page-break-after: always; }
+  .advantages > .advantages__reason:nth-child(3) {
+    page-break-before: always; }
+  .advantages__photo-wrapper,
+  .advantages__desc {
+    background: transparent !important; }
+  .header,
+  .main-title,
+  .advantages__reason,
+  .advantages__reason-wrapper,
+  .hotels,
+  .map,
+  .footer {
+    page-break-inside: avoid; }
+  .video__controls {
+    display: none; }
+  .photo {
+    page-break-before: always;
+    page-break-after: always; }
+  .photo__item,
+  .video {
+    page-break-inside: avoid; }
+  .photo__item:first-child {
+    margin-bottom: 2px; }
+  .photo__desc {
+    background: #fff !important;
+    outline: 1px solid black; }
+  .form-contacts {
+    margin-bottom: 10px; }
+  .form-contacts__input {
+    background: transparent; }
+  .form-contacts__square {
+    display: none; }
+  .form-sights {
+    margin-bottom: 10px;
+    -webkit-column-break-before: always;
+            break-before: always;
+    page-break-before: always; }
+  .review-form__submit {
+    display: none; }
+  .form-intro,
+  .form-contacts,
+  .form-impression,
+  .form-sights,
+  .form-emotions {
+    page-break-inside: avoid; } }

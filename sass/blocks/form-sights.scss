@@ -31,6 +31,8 @@
   border-radius: 10%;
   background-color: $bg-input;
   cursor: pointer;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
   &:hover {
 		background-color: $bg-input-hover;
@@ -51,6 +53,8 @@
   background-repeat: no-repeat;
   background-size: 24px auto;
   z-index: 10;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .form-sights__item .form-sights__checkbox-indicator:active::after {

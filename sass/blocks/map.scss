@@ -8,6 +8,8 @@
 	background-position: center center;
 	background-color: $bg-white;
 	background-size: auto;
+	-webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
 	&::after {
 		@include pos;

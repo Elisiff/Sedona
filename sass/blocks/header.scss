@@ -5,6 +5,8 @@
 	background-position: top center;
 	background-color: $bg-white;
 	background-size: cover;
+	-webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
 	&--index {
     min-height: 390px;

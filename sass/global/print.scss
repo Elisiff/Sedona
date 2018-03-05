@@ -4,7 +4,7 @@
   *:before,
   *:after {
     // background: transparent !important;
-    // color: #000 !important;
+    color: #000 !important;
     // box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -38,7 +38,9 @@
   }
 
   tr,
-  img {
+  img,
+  picture,
+  source {
     page-break-inside: avoid;
   }
 
@@ -69,5 +71,101 @@
   }
 
   //Стили для этого проекта
+  .page {
+    box-shadow: none !important;
+  }
 
+  .main-nav {
+    display: none;
+  }
+
+  .header--index::before {
+    display: none;
+  }
+
+  .header--other::before {
+    display: none;
+  }
+
+  .hotels__search {
+    display: none;
+  }
+
+  .advantages > .advantages__reason:nth-child(2), 
+  .advantages__more {
+    break-after: always;
+    page-break-after: always;
+  }
+
+  .advantages > .advantages__reason:nth-child(3) {
+    page-break-before: always;
+  }
+
+  .advantages__photo-wrapper,
+  .advantages__desc {
+    background: transparent !important;
+  }
+
+  .header,
+  .main-title,
+  .advantages__reason,
+  .advantages__reason-wrapper,
+  .hotels,
+  .map,
+  .footer {
+    page-break-inside: avoid;
+  }
+
+  .video__controls {
+    display: none;
+  }
+
+  .photo {
+    page-break-before: always;
+    page-break-after: always;
+  }
+
+  .photo__item,
+  .video {
+    page-break-inside: avoid;
+  }
+
+  .photo__item:first-child {
+    margin-bottom: 2px;
+  }
+
+  .photo__desc {
+    background: #fff !important;
+    outline: 1px solid black;
+  }
+
+  .form-contacts {
+    margin-bottom: 10px;
+  }
+
+  .form-contacts__input {   
+    background: transparent;
+  }
+
+  .form-contacts__square {
+    display: none;
+  }
+
+  .form-sights {
+    margin-bottom: 10px;
+    break-before: always;
+    page-break-before: always;
+  }
+
+  .review-form__submit {
+    display: none;
+  }
+
+  .form-intro,
+  .form-contacts,
+  .form-impression,
+  .form-sights,
+  .form-emotions {
+    page-break-inside: avoid;
+  }
 }

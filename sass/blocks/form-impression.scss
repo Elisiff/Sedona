@@ -27,6 +27,8 @@
   background-color: $bg-input;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
   &:hover {
 		background-color: $bg-input-hover;
@@ -46,6 +48,8 @@
   border-radius: 50%;
   background-color: $bg-indicator;
   z-index: 10;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .form-impression__item .form-impression__radio-indicator:active::after {
