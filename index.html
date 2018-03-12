@@ -222,6 +222,28 @@
 		</section>
 	</footer>
 
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByvxBbRRR40E7CFp-6ahi6A9pUsuf7NeA&callback=initMap">
+	</script>
+	<script>
+		function initMap() {
+			var sedona = {lat: 34.867895, lng: -111.773166};
+			var map = new google.maps.Map(document.querySelector(".map"), {
+				zoom: 7,
+				center: sedona
+			});
+			var marker = new google.maps.Marker({
+				position: sedona,
+				map: map,
+				title: "Седона",
+				icon: {
+					url: "img/icons-svg/icon-map-marker.svg",
+					scaledSize: new google.maps.Size(27, 27)
+				}
+			});
+		}
+	</script>
+	<!-- <script type="text/javascript" src="js/script.js"></script> -->
 	<script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
 </body>
 </html>
