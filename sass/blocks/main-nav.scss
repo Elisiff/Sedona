@@ -1,6 +1,13 @@
 .main-nav__menu {
-	// display: none;
 	background-color: $bg-blue-nav;
+}
+
+.main-nav--closed {
+  display: none;
+}
+
+.main-nav--opened {
+  display: block;
 }
 
 .main-nav__item {
@@ -137,12 +144,12 @@
 
 
 @media #{$tablet}, print {
-  .main-nav__menu {
+  .main-nav__menu,
+  .main-nav--closed {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    background-color: $bg-white;
-    
+    background-color: $bg-white;   
   }
 
   .main-nav__item {

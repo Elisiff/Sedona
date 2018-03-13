@@ -501,6 +501,12 @@ button {
 .main-nav__menu {
   background-color: #82b3d3; }
 
+.main-nav--closed {
+  display: none; }
+
+.main-nav--opened {
+  display: block; }
+
 .main-nav__item {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -1679,7 +1685,8 @@ button {
     .page {
       min-width: 768px; } }
   @media (min-width: 768px), print {
-  .main-nav__menu {
+  .main-nav__menu,
+  .main-nav--closed {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

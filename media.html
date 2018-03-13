@@ -47,11 +47,11 @@
   </script>
 
 	<!-- Навигация -->
-	<nav class="main-nav main-nav--closed">
-		<ul class="main-nav__menu">
+	<nav class="main-nav">
+		<ul class="main-nav__menu  main-nav--closed">
 			<li class="main-nav__item">
 				<a href="index.html">Главная</a>
-				<button type="button" class="main-nav__close-btn">Закрыть меню</button>
+				<button type="button" class="main-nav__close-btn" tabindex="0">Закрыть меню</button>
 			</li>
 			<li class="main-nav__item  main-nav__item--active">
 				<a class="main-nav__link--active">Фото и видео</a>
@@ -67,7 +67,7 @@
 					<img src="img/icons-svg/logo-sedona-mobile.svg" class="main-nav__logo" width="102" height="83" alt="Логотип">
 				</picture>
 			</a>
-			<button type="button" class="main-nav__open-btn">Открыть меню</button>
+			<button type="button" class="main-nav__open-btn" tabindex="0">Открыть меню</button>
 		</div>
 	</nav>
 
@@ -246,6 +246,7 @@
 		</section>
 	</footer>
 
+	<script type="text/javascript" src="js/script.js"></script>
 	<script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js"></script>
 </body>
 </html>
