@@ -1,8 +1,8 @@
 'use strict';
 
 (function () {
-  var ESC_KEYCODE = 27;
-  var ENTER_KEYCODE = 13;
+  window.ESC_KEYCODE = 27;
+  window.ENTER_KEYCODE = 13;
   var mainNav = document.querySelector('.main-nav__menu');
   var openBtn = document.querySelector('.main-nav__open-btn');
   var closeBtn = document.querySelector('.main-nav__close-btn');
@@ -15,7 +15,7 @@
   }
 
   function clickOpenBtnNav() {
-    openBtn.addEventListener('click', function (evt) {
+    openBtn.addEventListener('click', function () {
       openNav();
     });
   }
@@ -23,7 +23,7 @@
 
   function pressEnterOpenBtnNav() {
     openBtn.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === ENTER_KEYCODE) {
+      if (evt.keyCode === window.ENTER_KEYCODE) {
         openNav();
       }
     });
@@ -38,7 +38,7 @@
   }
 
   function clickCloseBtnNav() {
-    closeBtn.addEventListener('click', function (evt) {
+    closeBtn.addEventListener('click', function () {
       closeNav();
     });
   }
@@ -46,7 +46,7 @@
 
   function pressEscNav() {
     document.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === ESC_KEYCODE) {
+      if (evt.keyCode === window.ESC_KEYCODE) {
         closeNav();
       }
     });
@@ -55,7 +55,7 @@
 
   function pressEnterCloseBtnNav() {
     closeBtn.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === ENTER_KEYCODE) {
+      if (evt.keyCode === window.ENTER_KEYCODE) {
         closeNav();
       }
     });
