@@ -12,6 +12,7 @@
   var popupFail = document.querySelector('.popup__failure');
   var popupSuccess = document.querySelector('.popup__success');
   var popupOver = document.querySelector('.popup__overlay');
+  var page = document.querySelector('.page');
   var popupFailBtn = document.querySelector('.popup__failure-btn');
   var popupSuccessBtn = document.querySelector('.popup__success-btn');
   var submitBtn = document.querySelector('.review-form__submit-btn');
@@ -164,6 +165,7 @@
       popupSuccess.classList.add('popup__success--opened');
       popupOver.classList.remove('popup__overlay--closed');
       popupOver.classList.add('popup__overlay--opened');
+      page.style.overflow = 'hidden';
     }
   }
 
@@ -172,6 +174,7 @@
     popupSuccess.classList.add('popup__success--closed');
     popupOver.classList.remove('popup__overlay--opened');
     popupOver.classList.add('popup__overlay--closed');
+    page.style.overflow = 'visible';
   }
 
   function closePopupSuccessClick() {
@@ -197,11 +200,13 @@
   closePopupSuccessEnter();
 
   function closePopupSuccessEsc() {
-    document.addEventListener('keydown', function (evt) {
-      if (popupSuccess.classList.contains('popup__success--opened') && evt.keyCode === window.ESC_KEYCODE) {
-        closePopupSuccess();
-      }
-    });
+    if (popupSuccessBtn) {
+      document.addEventListener('keydown', function (evt) {
+        if (popupSuccess.classList.contains('popup__success--opened') && evt.keyCode === window.ESC_KEYCODE) {
+          closePopupSuccess();
+        }
+      });
+    }
   }
   closePopupSuccessEsc();
 
@@ -211,6 +216,7 @@
       popupFail.classList.add('popup__failure--opened');
       popupOver.classList.remove('popup__overlay--closed');
       popupOver.classList.add('popup__overlay--opened');
+      page.style.overflow = 'hidden';
     }
   }
 
@@ -219,6 +225,7 @@
     popupFail.classList.add('popup__failure--closed');
     popupOver.classList.remove('popup__overlay--opened');
     popupOver.classList.add('popup__overlay--closed');
+    page.style.overflow = 'visible';
   }
 
   function closePopupFailureClick() {
@@ -244,11 +251,13 @@
   closePopupFailureEnter();
 
   function closePopupFailureEsc() {
-    document.addEventListener('keydown', function (evt) {
-      if (popupFail.classList.contains('popup__failure--opened') && evt.keyCode === window.ESC_KEYCODE) {
-        closePopupFailure();
-      }
-    });
+    if (popupFailBtn) {
+      document.addEventListener('keydown', function (evt) {
+        if (popupFail.classList.contains('popup__failure--opened') && evt.keyCode === window.ESC_KEYCODE) {
+          closePopupFailure();
+        }
+      });
+    }
   }
   closePopupFailureEsc();
 
@@ -283,20 +292,44 @@
   }
   onSubmitBtnKeydown();
 
+  function resetForm() {
+    if (form) {
+      var formInput = form.getElementsByTagName('input');
+      var formTextarea = form.getElementsByTagName('textarea');
+      for (var i = 0; i < formInput.length; i++) {
+        var typeValue = formInput[i].getAttribute('type');
+        if (typeValue !== 'radio' && typeValue !== 'checkbox') {
+          formInput[i].value = '';
+        } else if (typeValue === 'radio' && formInput[i].value === 'positive') {
+          formInput[i].checked = true;
+        } else if (typeValue === 'checkbox' && formInput[i].name === 'form-sights__bridge') {
+          formInput[i].checked = true;
+        } else if (typeValue === 'checkbox' && formInput[i].name === 'form-sights__mountain') {
+          formInput[i].checked = true;
+        } else if (typeValue === 'checkbox' && formInput[i].name === 'form-sights__park') {
+          formInput[i].checked = true;
+        } else if (typeValue === 'checkbox' && formInput[i].name === 'form-sights__cliffs') {
+          formInput[i].checked = false;
+        }
+      }
+      for (var k = 0; k < formTextarea.length; k++) {
+        formTextarea[k].value = '';
+      }
+    }
+  }
+
   function formSubmit() {
-    if ((validateIntro) && (validateTelField) && (validateMailField)) {
-      form.addEventListener('submit', function (evt) {
-        evt.preventDefault();
-      });
-      return true;
-    } else {
-      return false;
+    if (form) {
+      if ((validateIntro) && (validateTelField) && (validateMailField)) {
+        form.addEventListener('submit', function (evt) {
+          evt.preventDefault();
+          resetForm();
+        });
+        return true;
+      } else {
+        return false;
+      }
     }
   }
   formSubmit();
-
-  // overflow: hidden; повесить на page, когда открыт оверлей
-  // resetForm();
-  // результаты отправки формы в консоль?
-
 })();
