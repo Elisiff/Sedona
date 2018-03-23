@@ -261,7 +261,7 @@
   }
   closePopupFailureEsc();
 
-  function onSubmitBtnClick() { 
+  function onSubmitBtnClick() {
     if (submitBtn) {
       submitBtn.addEventListener('click', function () {
         validateIntro();
@@ -319,17 +319,18 @@
   }
 
   function formSubmit() {
-    if (form) {
-      if ((validateIntro) && (validateTelField) && (validateMailField)) {
-        form.addEventListener('submit', function (evt) {
-          evt.preventDefault();
-          resetForm();
-        });
-        return true;
-      } else {
-        return false;
-      }
+    if ((validateIntro) && (validateTelField) && (validateMailField)) {
+      form.addEventListener('submit', function (evt) {
+        evt.preventDefault();
+        resetForm();
+      });
+      return true;
+    } else {
+      return false;
     }
   }
-  formSubmit();
+
+  if (form) {
+    formSubmit();
+  }
 })();
