@@ -1550,6 +1550,49 @@ button {
     -webkit-box-shadow: inset 4px 4px 0 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
             box-shadow: inset 4px 4px 0 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5; }
 
+.popup-btn {
+  position: fixed;
+  bottom: 3.5vh;
+  left: 2.8vw;
+  width: 50px;
+  height: 47px;
+  font-size: 0;
+  background-color: #81b3d2;
+  -webkit-box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+          box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+  z-index: 40;
+  cursor: pointer; }
+  .popup-btn--hidden {
+    display: none; }
+  .popup-btn--visible {
+    display: block; }
+  .popup-btn:hover {
+    background-color: #669ec0; }
+  .popup-btn:active {
+    background-color: #5496bd; }
+  .popup-btn::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 25px;
+    height: 5px;
+    z-index: 50;
+    background-color: #ffffff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .popup-btn::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    width: 25px;
+    height: 5px;
+    z-index: 50;
+    background-color: #ffffff;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+
 .popup__success {
   position: fixed;
   top: 40vh;

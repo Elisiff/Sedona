@@ -1,0 +1,50 @@
+.popup-btn {
+  position: fixed;
+  bottom: 3.5vh;
+  left: 2.8vw;
+  width: 50px;
+  height: 47px;
+  font-size: 0;
+  background-color: $bg-blue;
+  box-shadow: 0 0 15px 1px rgba(0, 1, 1, 0.2);
+  z-index: 40;
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--visible {
+    display: block;
+  }
+
+  &:hover {
+		background-color: $bg-blue-hover;
+	}
+
+	&:active {
+		background-color: $bg-blue-down;
+  }
+  
+  &::before {
+    @include pos;
+    top: 20px;
+    left: 5px;
+    width: 25px;
+    height: 5px;
+    z-index: 50;
+    background-color: $bg-white;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    @include pos;
+    top: 20px;
+    right: 5px;
+    width: 25px;
+    height: 5px;
+    z-index: 50;
+    background-color: $bg-white;
+    transform: rotate(45deg);
+  }
+}
