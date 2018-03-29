@@ -97,7 +97,7 @@ gulp.task("serve", ["scss"], function() {
   gulp.watch("*.html").on("change", server.reload);
 });
 
-//BUILD
+// BUILD
 
 // Gulp-sass для build
 gulp.task("style", function() {
@@ -193,6 +193,7 @@ gulp.task("copy", function() {
       "fonts/**/*.{woff,woff2,eot,ttf}",
       "img/**",
       "js/**",
+      "video/**",
       "*.html"
     ], {
       base: "."

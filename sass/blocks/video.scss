@@ -18,8 +18,12 @@
 	@include text(400, normal, 14px, 24px, $text-gray);
 }
 
-.video__presentation img, 
-.video__presentation source {
+.video__presentation {
+	min-width: 320px;
+	cursor: pointer;
+}
+
+.video__presentation video {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -60,10 +64,20 @@
 	}
 }
 
+.video__progress {
+	@include pos;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	background-color: $bg-white;
+}
+
 .video__toggle {
 	@include pos;
 	top: -100%;
-	left: 15.254%; // 36px
+	left: 0;
 	width: 9px;
 	height: 9px;
 	border-radius: 50%;
@@ -94,7 +108,19 @@
 	}
 }
 
+.video__play {
+	width: 16px;
+	height: 20px;
+}
+
+.video__pause {
+	display: none;
+	width: 16px;
+	height: 20px;
+}
+
 .video__replay {
+	display: none;
 	width: 16px;
 	height: 20px;
 }
@@ -129,6 +155,7 @@
 
 	.video__presentation {
 		display: block;
+		min-width: 648px;
 		padding: 0 7.8125%;
 	}
 
@@ -159,10 +186,6 @@
 		&::after {
 			background-color: rgba(80, 76, 74, 0.2);
 		}
-	}
-
-	.video__toggle {
-		left: 28.9%;
 	}
 
 	.video__btns {
@@ -210,14 +233,13 @@
 	}
 
 	.video__presentation {
+		width: 800px;
+		min-width: 100%;
+		height: 500px;
 		padding: 0 16.667%;
 	}
 
 	.video__controls {
 		padding: 0 16.667%;
-	}
-
-	.video__toggle {
-		left: 20.9%;
 	}
 }

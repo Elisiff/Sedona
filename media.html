@@ -185,19 +185,24 @@
 				<b class="video__title">Все еще сомневаетесь?</b>
 				<p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
 			</div>
-			<picture class="video__presentation">
-				<source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-				<img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видеопрезентация">
-			</picture>
+			<div class="video__presentation">
+				<video src="video/Secret Sedona - HD.mp4" poster="img/video-desktop@2x.jpg" alt="Видеопрезентация" class="video__file">
+			</div>
 
 			<section class="video__controls">
 				<div class="video__bar-wrapper">
 					<div class="video__bar">
+						<span class="video__progress"></span>
 						<span class="video__toggle"></span>
 					</div>
 				</div>
 				<div class="video__btns">
+					<svg xmlns="http://www.w3.org/2000/svg" class="video__btn  video__play">
+			    	<use xlink:href="#icon-video-play"></use>
+			  	</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" class="video__btn  video__pause">
+			    	<use xlink:href="#icon-video-pause"></use>
+			  	</svg>
 					<svg xmlns="http://www.w3.org/2000/svg" class="video__btn  video__replay">
 			    	<use xlink:href="#icon-video-replay"></use>
 			  	</svg>

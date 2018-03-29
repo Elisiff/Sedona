@@ -1095,8 +1095,11 @@ button {
   line-height: 24px;
   color: #333333; }
 
-.video__presentation img,
-.video__presentation source {
+.video__presentation {
+  min-width: 320px;
+  cursor: pointer; }
+
+.video__presentation video {
   display: block;
   width: 100%;
   height: auto; }
@@ -1132,11 +1135,21 @@ button {
     height: 100%;
     background-color: rgba(80, 76, 74, 0.2); }
 
+.video__progress {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: #ffffff; }
+
 .video__toggle {
   content: "";
   position: absolute;
   top: -100%;
-  left: 15.254%;
+  left: 0;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -1165,7 +1178,17 @@ button {
   .video__btn:active {
     fill: #c1c1c1; }
 
+.video__play {
+  width: 16px;
+  height: 20px; }
+
+.video__pause {
+  display: none;
+  width: 16px;
+  height: 20px; }
+
 .video__replay {
+  display: none;
   width: 16px;
   height: 20px; }
 
@@ -2085,6 +2108,7 @@ button {
     padding-top: 27px; }
   .video__presentation {
     display: block;
+    min-width: 648px;
     padding: 0 7.8125%; }
   .video__controls {
     position: absolute;
@@ -2113,8 +2137,6 @@ button {
     background-color: rgba(255, 255, 255, 0.3); }
     .video__bar::after {
       background-color: rgba(80, 76, 74, 0.2); }
-  .video__toggle {
-    left: 28.9%; }
   .video__btns {
     position: relative;
     -webkit-box-ordinal-group: 2;
@@ -2418,11 +2440,12 @@ button {
   .video__desc {
     padding: 70px 31.667% 71px 31.667%; }
   .video__presentation {
+    width: 800px;
+    min-width: 100%;
+    height: 500px;
     padding: 0 16.667%; }
   .video__controls {
     padding: 0 16.667%; }
-  .video__toggle {
-    left: 20.9%; }
   .review-form {
     padding: 16px 10% 0 10%; }
   .review-form__submit {
