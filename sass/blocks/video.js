@@ -154,12 +154,14 @@
     });
   }
 
-  video.addEventListener('loadstart', function () {
-    endedVideo();
-    clickPlayBtn();
-    clickPauseBtn();
-    clickReplayBtn();
-    clickVideo();
-    movePin();
-  }, false);
+  if (video) {
+    video.addEventListener('loadstart', function () {
+      endedVideo();
+      clickPlayBtn();
+      clickPauseBtn();
+      clickReplayBtn();
+      clickVideo();
+      movePin();
+    }, false);
+  }
 })();
