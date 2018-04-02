@@ -11,41 +11,42 @@
 
   function playVideo() {
     video.play();
+    video.addEventListener('timeupdate', updateBar, false);
     playBtn.style.display = 'none';
     pauseBtn.style.display = 'block';
     replayBtn.style.display = 'none';
-    // video.addEventListener('timeupdate', updateBar);
   }
 
   function pauseVideo() {
     video.pause();
-    playBtn.style.display = 'block';
-    pauseBtn.style.display = 'none';
-    replayBtn.style.display = 'none';
-    // video.addEventListener('timeupdate', function (evt) {
-    //   evt.stopPropagation();
-    // });
+    video.removeEventListener('timeupdate', updateBar);
+    if (video.currentTime !== video.duration) {
+      playBtn.style.display = 'block';
+      pauseBtn.style.display = 'none';
+      replayBtn.style.display = 'none';
+    }
   }
 
   function replayVideo() {
     video.play();
+    video.addEventListener('timeupdate', updateBar, false);
     playBtn.style.display = 'none';
     pauseBtn.style.display = 'block';
     replayBtn.style.display = 'none';
-    // video.addEventListener('timeupdate', updateBar, false);
   }
 
   function endedVideo() {
     if (video) {
       video.addEventListener('ended', function () {
-        video.pause();
-        pauseBtn.style.display = 'none';
-        playBtn.style.display = 'none';
-        replayBtn.style.display = 'block';
+        if (video.currentTime === video.duration) {
+          video.pause();
+          pauseBtn.style.display = 'none';
+          playBtn.style.display = 'none';
+          replayBtn.style.display = 'block';
+        }
       });
     }
   }
-  // endedVideo();
 
   function clickPlayBtn() {
     if (video) {
@@ -54,7 +55,6 @@
       });
     }
   }
-  // clickPlayBtn();
 
   function clickPauseBtn() {
     if (video) {
@@ -63,7 +63,6 @@
       });
     }
   }
-  // clickPauseBtn();
 
   function clickReplayBtn() {
     if (video) {
@@ -72,7 +71,6 @@
       });
     }
   }
-  // clickReplayBtn();
 
   function toggleVideo() {
     if (video.paused) {
@@ -89,10 +87,9 @@
       });
     }
   }
-  // clickVideo();
 
   function updateBar() {
-    var percentage = Math.floor((100 / video.duration) * video.currentTime);
+    var percentage = Math.ceil((100 / video.duration) * video.currentTime);
     progressBar.style.width = percentage + '%';
     progressToggle.style.left = percentage + '%';
   }
@@ -106,17 +103,33 @@
     levelBarPaddingR = Number(levelBarPaddingR.replace(/px/, ''));
     window.levelBarWidth = levelContainerWidth - (levelBarPaddingL + levelBarPaddingR);
     window.levelStyleX = Number(getComputedStyle(progressToggle).left.replace(/px/, '')) * window.levelBarWidth / 100;
-
-    progressToggle.addEventListener('mousedown', function (evt) {
+    levelContainer.addEventListener('mousedown', function (evt) {
       evt.preventDefault();
       pauseVideo();
+      levelContainer.style.cursor = 'pointer';
 
       var startCoords = {
         x: evt.clientX
       };
+      var progressToggleX = progressToggle.getBoundingClientRect().right;
+      progressToggle.style.left = (startCoords.x - progressToggleX) + progressToggle.offsetLeft + 4 + 'px';
+      progressBar.style.width = progressToggle.style.left;
+      if (progressToggle.offsetLeft > window.levelBarWidth) {
+        progressToggle.style.left = window.levelBarWidth + 'px';
+        progressBar.style.width = progressToggle.style.left;
+      } else
+      if (progressToggle.offsetLeft < 0) {
+        progressToggle.style.left = 0 + 'px';
+        progressBar.style.width = progressToggle.style.left;
+      }
+      window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
+      var percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
+      var curTime = (percentageX / 100) * video.duration;
+      video.currentTime = curTime;
 
       function onMouseMove(moveEvt) {
         moveEvt.preventDefault();
+        pauseVideo();
 
         var shift = {
           x: startCoords.x - moveEvt.clientX
@@ -138,13 +151,15 @@
           progressBar.style.width = progressToggle.style.left;
         }
         window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
-        var percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
-        var curTime = (percentageX / 100) * video.duration;
+        percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
+        curTime = (percentageX / 100) * video.duration;
         video.currentTime = curTime;
       }
 
-      var onMouseUp = function (upEvt) {
+      var onMouseUp = function (upEvt) { 
         upEvt.preventDefault();
+        pauseVideo();
+        levelContainer.style.cursor = 'default';
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
       };
@@ -155,13 +170,13 @@
   }
 
   if (video) {
-    video.addEventListener('loadstart', function () {
+    // video.addEventListener('loadstart', function () {
       endedVideo();
       clickPlayBtn();
       clickPauseBtn();
       clickReplayBtn();
       clickVideo();
       movePin();
-    }, false);
+    // }, false);
   }
 })();
