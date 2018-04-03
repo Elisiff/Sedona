@@ -1099,10 +1099,29 @@ button {
   min-width: 320px;
   cursor: pointer; }
 
-.video__presentation video {
+.video__file {
   display: block;
+  position: relative;
   width: 100%;
   height: auto; }
+  .video__file::-webkit-media-controls {
+    display: none !important; }
+  .video__file::-moz-media-controls {
+    display: none !important; }
+
+.video__error {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 25%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+  background-color: black;
+  cursor: default; }
 
 .video__controls {
   padding: 0 20px; }

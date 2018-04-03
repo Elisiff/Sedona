@@ -465,6 +465,9 @@
   var progressBar = document.querySelector('.video__progress');
   var progressToggle = document.querySelector('.video__toggle');
   var levelContainer = document.querySelector('.video__bar-wrapper');
+  var errVideo = document.querySelector('.video__error');
+  var fullScreenBtn = document.querySelector('.video__fullscreen');
+  // var videoWrapper = document.querySelector('.video__presentation');
 
   function playVideo() {
     video.play();
@@ -545,10 +548,97 @@
     }
   }
 
+  // FullScreen API
+  // function openFullScreen() {
+  //   if (video.requestFullscreen) {
+  //     video.requestFullscreen();
+  //   } else if (video.mozRequestFullScreen) {
+  //     video.mozRequestFullScreen();
+  //   } else if (video.webkitRequestFullscreen) {
+  //     video.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+  //   } else if (video.msRequestFullScreen) {
+  //     video.msRequestFullScreen();
+  //   }
+  // }
+
+  // function cancelFullScreen() {
+  //   if (document.requestFullscreen) {
+  //     document.requestFullscreen();
+  //   } else if (document.webkitRequestFullscreen) {
+  //     document.webkitRequestFullscreen();
+  //   } else if (document.mozRequestFullscreen) {
+  //     document.mozRequestFullScreen();
+  //   } else if (document.msRequestFullScreen) {
+  //     document.msRequestFullScreen();
+  //   }
+  // }
+
+  // function toggleFullScreen() {
+  //   if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
+  //     openFullScreen();
+  //   } else {
+  //     cancelFullScreen();
+  //   }
+  // }
+
+  function cancelFullScreen(el) {
+    var requestMethod = el.cancelFullScreen || el.webkitCancelFullScreen || el.mozCancelFullScreen || el.exitFullscreen;
+    if (requestMethod) { // cancel full screen.
+      requestMethod.call(el);
+    } else if (typeof window.ActiveXObject !== 'undefined') { // Older IE.
+      var wscript = new ActiveXObject('WScript.Shell');
+      if (wscript !== null) {
+        wscript.SendKeys('{F11}');
+      }
+    }
+  }
+
+  function requestFullScreen(el) {
+    // Supports most browsers and their versions.
+    var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+
+    if (requestMethod) { // Native full screen.
+      requestMethod.call(el);
+    } else if (typeof window.ActiveXObject !== 'undefined') { // Older IE.
+      var wscript = new ActiveXObject('WScript.Shell');
+      if (wscript !== null) {
+        wscript.SendKeys('{F11}');
+      }
+    }
+    return false;
+  }
+
+  function setAttributes(elem, obj) {
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        elem[prop] = obj[prop];
+      }
+    }
+  }
+
+  function toggleFullScreen() {
+    var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) || (document.mozFullScreen || document.webkitIsFullScreen);
+
+    if (isInFullScreen) {
+      cancelFullScreen(document);
+    } else {
+      requestFullScreen(video);
+    }
+    return false;
+  }
+
+  function clickFullScreenBtn() {
+    if (video) {
+      fullScreenBtn.addEventListener('click', function () {
+        toggleFullScreen();
+      });
+    }
+  }
+
   function updateBar() {
     var percentage = Math.ceil((100 / video.duration) * video.currentTime);
     progressBar.style.width = percentage + '%';
-    progressToggle.style.left = percentage + '%';
+    progressToggle.style.left = progressBar.style.width;
   }
 
   function movePin() {
@@ -613,7 +703,7 @@
         video.currentTime = curTime;
       }
 
-      var onMouseUp = function (upEvt) { 
+      var onMouseUp = function (upEvt) {
         upEvt.preventDefault();
         pauseVideo();
         levelContainer.style.cursor = 'default';
@@ -626,14 +716,27 @@
     });
   }
 
+  function errorVideo() {
+    video.style.display = 'none';
+    errVideo.style.display = 'block';
+  }
+
   if (video) {
-    // video.addEventListener('loadstart', function () {
+    video.addEventListener('loadeddata', function () {
+      video.removeEventListener('error', errorVideo);
       endedVideo();
       clickPlayBtn();
       clickPauseBtn();
       clickReplayBtn();
       clickVideo();
+      clickFullScreenBtn();
       movePin();
-    // }, false);
+    }, false);
+  }
+
+  if (video) {
+    video.addEventListener('error', function () {
+      errorVideo();
+    });
   }
 })();
