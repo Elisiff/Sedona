@@ -10,7 +10,16 @@
   var levelContainer = document.querySelector('.video__bar-wrapper');
   var errVideo = document.querySelector('.video__error');
   var fullScreenBtn = document.querySelector('.video__fullscreen');
-  // var videoWrapper = document.querySelector('.video__presentation');
+  var videoWrapper = document.querySelector('.video__presentation');
+  var videoPlayFullBtn = document.querySelector('.video__play-full');
+
+  function togglePlayFullBtn() {
+    if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
+      videoPlayFullBtn.style.display = 'block';
+    } else {
+      videoPlayFullBtn.style.display = 'none';
+    }
+  }
 
   function playVideo() {
     video.play();
@@ -18,6 +27,7 @@
     playBtn.style.display = 'none';
     pauseBtn.style.display = 'block';
     replayBtn.style.display = 'none';
+    videoPlayFullBtn.style.display = 'none';
   }
 
   function pauseVideo() {
@@ -27,6 +37,7 @@
       playBtn.style.display = 'block';
       pauseBtn.style.display = 'none';
       replayBtn.style.display = 'none';
+      togglePlayFullBtn();
     }
   }
 
@@ -36,6 +47,7 @@
     playBtn.style.display = 'none';
     pauseBtn.style.display = 'block';
     replayBtn.style.display = 'none';
+    videoPlayFullBtn.style.display = 'none';
   }
 
   function endedVideo() {
@@ -46,6 +58,7 @@
           pauseBtn.style.display = 'none';
           playBtn.style.display = 'none';
           replayBtn.style.display = 'block';
+          togglePlayFullBtn();
         }
       });
     }
@@ -151,12 +164,12 @@
     return false;
   }
 
-  function setAttributes(elem, obj) {
-    for (var prop in obj) {
-      if (obj.hasOwnProperty(prop)) {
-        elem[prop] = obj[prop];
-      }
-    }
+  function calcSizesBtn() {
+    var scrWidth = screen.width;
+    var scrHeight = screen.height;
+
+    videoPlayFullBtn.style.left = (50 - ((100 * 120 / scrWidth) / 2)) + '%';
+    videoPlayFullBtn.style.top = (50 - ((100 * 120 / scrHeight) / 2)) + '%';
   }
 
   function toggleFullScreen() {
@@ -164,8 +177,11 @@
 
     if (isInFullScreen) {
       cancelFullScreen(document);
+      videoPlayFullBtn.style.display = 'none';
     } else {
-      requestFullScreen(video);
+      requestFullScreen(videoWrapper);
+      calcSizesBtn();
+      videoPlayFullBtn.style.display = 'block';
     }
     return false;
   }
@@ -280,6 +296,12 @@
   if (video) {
     video.addEventListener('error', function () {
       errorVideo();
+    });
+  }
+
+  if (video) {
+    window.addEventListener('resize', function () {
+      togglePlayFullBtn();
     });
   }
 })();

@@ -1096,8 +1096,10 @@ button {
   color: #333333; }
 
 .video__presentation {
+  position: relative;
   min-width: 320px;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 0; }
 
 .video__file {
   display: block;
@@ -1122,6 +1124,16 @@ button {
   text-align: center;
   background-color: black;
   cursor: default; }
+
+.video__play-full {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 47%;
+  left: 47%;
+  width: 120px;
+  height: 120px;
+  fill: rgba(225, 225, 225, 0.6); }
 
 .video__controls {
   padding: 0 20px; }
@@ -2128,7 +2140,7 @@ button {
   .video__presentation {
     display: block;
     min-width: 648px;
-    padding: 0 7.8125%; }
+    margin: 0 7.8125%; }
   .video__controls {
     position: absolute;
     display: -webkit-box;
@@ -2455,16 +2467,18 @@ button {
   .photo__likes-icon {
     fill: #ffffff; }
   .video {
-    margin-bottom: 85px; }
+    margin-bottom: 85px;
+    padding: 0 16.667%; }
   .video__desc {
-    padding: 70px 31.667% 71px 31.667%; }
+    padding: 70px 15% 71px 15%; }
   .video__presentation {
-    width: 800px;
+    width: 100%;
     min-width: 100%;
-    height: 500px;
-    padding: 0 16.667%; }
+    height: 100%;
+    margin: 0; }
   .video__controls {
-    padding: 0 16.667%; }
+    width: 66.666%;
+    padding: 0; }
   .review-form {
     padding: 16px 10% 0 10%; }
   .review-form__submit {
