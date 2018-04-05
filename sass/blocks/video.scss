@@ -21,6 +21,7 @@
 .video__presentation {
 	position: relative;
 	min-width: 320px;
+	min-height: 201px;
 	cursor: pointer;
 	padding: 0;
 }
@@ -43,8 +44,9 @@
 .video__error {
 	display: none;
 	width: 100%;
-	height: 100%;
-	padding-top: 25%;
+	height: auto;
+	min-height: 201px;
+	padding-top: 14%;
 	@include text(400, normal, 20px, 24px, $text-white);
 	text-align: center;
 	background-color: black;
@@ -188,7 +190,12 @@
 	.video__presentation {
 		display: block;
 		min-width: 648px;
+		min-height: 499px;
 		margin: 0 7.8125%;
+	}
+
+	.video__error {
+		min-height: 499px;
 	}
 
 	.video__controls {
@@ -268,8 +275,13 @@
 	.video__presentation {
 		width: 100%; // 800px
 		min-width: 100%;
+		min-height: 500px;
 		height: 100%; // 500px
 		margin: 0;
+	}
+
+	.video__error {
+		min-height: 500px;
 	}
 
 	.video__controls {

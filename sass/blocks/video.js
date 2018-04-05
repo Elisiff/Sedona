@@ -14,7 +14,7 @@
   var videoPlayFullBtn = document.querySelector('.video__play-full');
 
   function togglePlayFullBtn() {
-    if (window.innerWidth === screen.width && window.innerHeight === screen.height) {
+    if (window.innerWidth === screen.width && window.innerHeight === screen.height && video.paused) {
       videoPlayFullBtn.style.display = 'block';
     } else {
       videoPlayFullBtn.style.display = 'none';
@@ -84,6 +84,14 @@
     if (video) {
       replayBtn.addEventListener('click', function () {
         replayVideo();
+      });
+    }
+  }
+
+  function clickPlayFullBtn() {
+    if (video) {
+      videoPlayFullBtn.addEventListener('click', function () {
+        playVideo();
       });
     }
   }
@@ -177,11 +185,9 @@
 
     if (isInFullScreen) {
       cancelFullScreen(document);
-      videoPlayFullBtn.style.display = 'none';
     } else {
       requestFullScreen(videoWrapper);
       calcSizesBtn();
-      videoPlayFullBtn.style.display = 'block';
     }
     return false;
   }
@@ -287,6 +293,7 @@
       clickPlayBtn();
       clickPauseBtn();
       clickReplayBtn();
+      clickPlayFullBtn();
       clickVideo();
       clickFullScreenBtn();
       movePin();

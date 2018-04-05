@@ -1098,6 +1098,7 @@ button {
 .video__presentation {
   position: relative;
   min-width: 320px;
+  min-height: 201px;
   cursor: pointer;
   padding: 0; }
 
@@ -1114,8 +1115,9 @@ button {
 .video__error {
   display: none;
   width: 100%;
-  height: 100%;
-  padding-top: 25%;
+  height: auto;
+  min-height: 201px;
+  padding-top: 14%;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -2140,7 +2142,10 @@ button {
   .video__presentation {
     display: block;
     min-width: 648px;
+    min-height: 499px;
     margin: 0 7.8125%; }
+  .video__error {
+    min-height: 499px; }
   .video__controls {
     position: absolute;
     display: -webkit-box;
@@ -2474,8 +2479,11 @@ button {
   .video__presentation {
     width: 100%;
     min-width: 100%;
+    min-height: 500px;
     height: 100%;
     margin: 0; }
+  .video__error {
+    min-height: 500px; }
   .video__controls {
     width: 66.666%;
     padding: 0; }
