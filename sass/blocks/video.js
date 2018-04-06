@@ -206,7 +206,7 @@
     progressToggle.style.left = progressBar.style.width;
   }
 
-  function movePin() {
+  function calcProgress() {
     var levelContainerWidth = getComputedStyle(levelContainer).width;
     levelContainerWidth = Number(levelContainerWidth.replace(/px/, ''));
     var levelBarPaddingL = getComputedStyle(levelContainer).paddingLeft;
@@ -215,6 +215,9 @@
     levelBarPaddingR = Number(levelBarPaddingR.replace(/px/, ''));
     window.levelBarWidth = levelContainerWidth - (levelBarPaddingL + levelBarPaddingR);
     window.levelStyleX = Number(getComputedStyle(progressToggle).left.replace(/px/, '')) * window.levelBarWidth / 100;
+  }
+
+  function movePin() {
     levelContainer.addEventListener('mousedown', function (evt) {
       evt.preventDefault();
       pauseVideo();
@@ -226,6 +229,7 @@
       var progressToggleX = progressToggle.getBoundingClientRect().right;
       progressToggle.style.left = (startCoords.x - progressToggleX) + progressToggle.offsetLeft + 4 + 'px';
       progressBar.style.width = progressToggle.style.left;
+      calcProgress();
       if (progressToggle.offsetLeft > window.levelBarWidth) {
         progressToggle.style.left = window.levelBarWidth + 'px';
         progressBar.style.width = progressToggle.style.left;
@@ -309,6 +313,21 @@
   if (video) {
     window.addEventListener('resize', function () {
       togglePlayFullBtn();
+      calcProgress();
+      if (progressToggle.offsetLeft > window.levelBarWidth) {
+        progressToggle.style.left = window.levelBarWidth + 'px';
+        progressBar.style.width = progressToggle.style.left;
+      }
+      // else
+      // if (progressToggle.offsetLeft <= 0) {
+      //   progressToggle.style.left = 0 + 'px';
+      //   progressBar.style.width = progressToggle.style.left;
+      // }
+      window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
+      var percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
+      var curTime = (percentageX / 100) * video.duration;
+      video.currentTime = curTime;
+      endedVideo();
     });
   }
 })();

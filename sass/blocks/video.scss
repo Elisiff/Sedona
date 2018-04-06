@@ -22,8 +22,9 @@
 	position: relative;
 	min-width: 320px;
 	min-height: 201px;
-	cursor: pointer;
 	padding: 0;
+	background-color: #fff;
+	cursor: pointer;
 }
 
 .video__file {
@@ -190,7 +191,6 @@
 	.video__presentation {
 		display: block;
 		min-width: 648px;
-		min-height: 499px;
 		margin: 0 7.8125%;
 	}
 
@@ -285,7 +285,7 @@
 	}
 
 	.video__controls {
-		width: 66.666%;
+		width: 66.667%;
 		padding: 0;
 	}
 }

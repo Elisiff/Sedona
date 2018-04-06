@@ -71,7 +71,7 @@
       var reg = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/gi;
       if (contactsTel.value !== '') {
         if (!reg.test(contactsTel.value)) {
-          contactsTel.setCustomValidity('Номер телефона должен соответствовать шаблону: + 7 ХХХ ХХХ ХХ ХХ или 8 ХХХ ХХХ ХХ ХХ');
+          contactsTel.setCustomValidity('Номер телефона должен соответствовать шаблону: 8 ХХХ ХХХ ХХ ХХ или ХХХ ХХ ХХ');
           contactsTel.setAttribute('style', 'box-shadow: inset 0 0 0 2px red;');
           contactsTel.style.outline = 'none';
           telError.setAttribute('style', 'visibility: visible;');
@@ -103,7 +103,7 @@
       var reg = /^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/gi;
       if (contactsMail.value !== '') {
         if (!reg.test(contactsMail.value)) {
-          contactsMail.setCustomValidity('Адрес электронной почты должен соответствовать шаблону: X@XX.XX');
+          contactsMail.setCustomValidity('Адрес электронной почты должен состоять из латинских букв и соответствовать шаблону: X@XX.XX');
           contactsMail.setAttribute('style', 'box-shadow: inset 0 0 0 2px red;');
           contactsMail.style.outline = 'none';
           return false;
@@ -663,7 +663,7 @@
     progressToggle.style.left = progressBar.style.width;
   }
 
-  function movePin() {
+  function calcProgress() {
     var levelContainerWidth = getComputedStyle(levelContainer).width;
     levelContainerWidth = Number(levelContainerWidth.replace(/px/, ''));
     var levelBarPaddingL = getComputedStyle(levelContainer).paddingLeft;
@@ -672,6 +672,9 @@
     levelBarPaddingR = Number(levelBarPaddingR.replace(/px/, ''));
     window.levelBarWidth = levelContainerWidth - (levelBarPaddingL + levelBarPaddingR);
     window.levelStyleX = Number(getComputedStyle(progressToggle).left.replace(/px/, '')) * window.levelBarWidth / 100;
+  }
+
+  function movePin() {
     levelContainer.addEventListener('mousedown', function (evt) {
       evt.preventDefault();
       pauseVideo();
@@ -683,6 +686,7 @@
       var progressToggleX = progressToggle.getBoundingClientRect().right;
       progressToggle.style.left = (startCoords.x - progressToggleX) + progressToggle.offsetLeft + 4 + 'px';
       progressBar.style.width = progressToggle.style.left;
+      calcProgress();
       if (progressToggle.offsetLeft > window.levelBarWidth) {
         progressToggle.style.left = window.levelBarWidth + 'px';
         progressBar.style.width = progressToggle.style.left;
@@ -766,6 +770,21 @@
   if (video) {
     window.addEventListener('resize', function () {
       togglePlayFullBtn();
+      calcProgress();
+      if (progressToggle.offsetLeft > window.levelBarWidth) {
+        progressToggle.style.left = window.levelBarWidth + 'px';
+        progressBar.style.width = progressToggle.style.left;
+      }
+      // else
+      // if (progressToggle.offsetLeft <= 0) {
+      //   progressToggle.style.left = 0 + 'px';
+      //   progressBar.style.width = progressToggle.style.left;
+      // }
+      window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
+      var percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
+      var curTime = (percentageX / 100) * video.duration;
+      video.currentTime = curTime;
+      endedVideo();
     });
   }
 })();

@@ -71,7 +71,7 @@
       var reg = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/gi;
       if (contactsTel.value !== '') {
         if (!reg.test(contactsTel.value)) {
-          contactsTel.setCustomValidity('Номер телефона должен соответствовать шаблону: + 7 ХХХ ХХХ ХХ ХХ или 8 ХХХ ХХХ ХХ ХХ');
+          contactsTel.setCustomValidity('Номер телефона должен соответствовать шаблону: 8 ХХХ ХХХ ХХ ХХ или ХХХ ХХ ХХ');
           contactsTel.setAttribute('style', 'box-shadow: inset 0 0 0 2px red;');
           contactsTel.style.outline = 'none';
           telError.setAttribute('style', 'visibility: visible;');
@@ -103,7 +103,7 @@
       var reg = /^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/gi;
       if (contactsMail.value !== '') {
         if (!reg.test(contactsMail.value)) {
-          contactsMail.setCustomValidity('Адрес электронной почты должен соответствовать шаблону: X@XX.XX');
+          contactsMail.setCustomValidity('Адрес электронной почты должен состоять из латинских букв и соответствовать шаблону: X@XX.XX');
           contactsMail.setAttribute('style', 'box-shadow: inset 0 0 0 2px red;');
           contactsMail.style.outline = 'none';
           return false;
