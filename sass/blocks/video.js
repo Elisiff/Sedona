@@ -201,8 +201,9 @@
   }
 
   function updateBar() {
-    var percentage = Math.ceil((100 / video.duration) * video.currentTime);
-    progressBar.style.width = percentage + '%';
+    calcProgress();
+    window.pixels = (video.currentTime * window.levelBarWidth / video.duration);
+    progressBar.style.width = window.pixels + 'px';
     progressToggle.style.left = progressBar.style.width;
   }
 
@@ -227,7 +228,7 @@
         x: evt.clientX
       };
       var progressToggleX = progressToggle.getBoundingClientRect().right;
-      progressToggle.style.left = (startCoords.x - progressToggleX) + progressToggle.offsetLeft + 4 + 'px';
+      progressToggle.style.left = (startCoords.x - progressToggleX) + progressToggle.offsetLeft + 'px';
       progressBar.style.width = progressToggle.style.left;
       calcProgress();
       if (progressToggle.offsetLeft > window.levelBarWidth) {
@@ -239,7 +240,7 @@
         progressBar.style.width = progressToggle.style.left;
       }
       window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
-      var percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
+      var percentageX = Math.ceil((window.levelStyleX * 100) / window.levelBarWidth);
       var curTime = (percentageX / 100) * video.duration;
       video.currentTime = curTime;
 
@@ -267,7 +268,7 @@
           progressBar.style.width = progressToggle.style.left;
         }
         window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
-        percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
+        percentageX = Math.ceil((window.levelStyleX * 100) / window.levelBarWidth);
         curTime = (percentageX / 100) * video.duration;
         video.currentTime = curTime;
       }
@@ -313,21 +314,7 @@
   if (video) {
     window.addEventListener('resize', function () {
       togglePlayFullBtn();
-      calcProgress();
-      if (progressToggle.offsetLeft > window.levelBarWidth) {
-        progressToggle.style.left = window.levelBarWidth + 'px';
-        progressBar.style.width = progressToggle.style.left;
-      }
-      // else
-      // if (progressToggle.offsetLeft <= 0) {
-      //   progressToggle.style.left = 0 + 'px';
-      //   progressBar.style.width = progressToggle.style.left;
-      // }
-      window.levelStyleX = Number(progressToggle.style.left.replace(/px/, ''));
-      var percentageX = Math.floor((window.levelStyleX * 100) / window.levelBarWidth);
-      var curTime = (percentageX / 100) * video.duration;
-      video.currentTime = curTime;
-      endedVideo();
+      updateBar();
     });
   }
 })();
